@@ -1,0 +1,38 @@
+% Common packages and page config
+\input{util/common-packages.tex}
+
+% Vietnamese encode and typefaces
+\input{util/vietnamese.tex}
+
+% Line, paragraph spacing
+\input{util/typography.tex}
+
+\input{util/command-utils.tex}
+
+\begin{document}
+
+% ========= TITLE ========= %
+
+\include{pages/1-title.tex}
+
+% ========= ABSTRACT ========= %
+
+\include{pages/2-abstract.tex}
+
+
+% ========= TABLE OF CONTENTS ========= %
+
+\tableofcontents
+\thispagestyle{empty}
+\clearpage
+
+% ========= MAIN CONTENT ========= %
+
+\include{pages/3-main/main.tex}
+
+% ========= BIBLIOGRAPHY ========= %
+
+% \nocite{*} % TODO IMPORTANT Comment this when publishing
+\include{pages/4-bibliography.tex}
+
+\end{document}

@@ -1,0 +1,38 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[
+	a4paper,
+	total={5.5in,9in},
+	% left=30mm,
+	% right=20mm,
+	% top=20mm,
+	% bottom=20mm,
+	includefoot, % footer and page number follow page margins
+]{geometry}
+
+% package for including graphics with figure-environment
+\usepackage{graphicx}
+
+% Handle section anchors and links
+\usepackage[unicode]{hyperref}  
+
+% Package for code listing
+% This package requires additional system configuration
+% \usepackage{minted}
+
+% Break long url nicely
+\usepackage{url}
+\def\UrlBreaks{\do\/\do-}
+
+% package to improve line breaks
+\usepackage{microtype}
+
+% colors for hyperlinks
+\hypersetup{colorlinks=true,
+			citecolor=black,
+			filecolor=black,
+			linkcolor=black,
+			urlcolor=black
+      }
+
+% package for bibliography
+\usepackage[numbers,sort&compress]{natbib}

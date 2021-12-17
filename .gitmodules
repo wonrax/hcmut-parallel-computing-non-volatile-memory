@@ -1,0 +1,3 @@
+[submodule "external/vietnamese-bibtex"]
+	path = external/vietnamese-bibtex
+	url = https://github.com/wonrax/vietnamese-bibtex
