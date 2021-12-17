@@ -4,28 +4,28 @@
 \usepackage[vietnamese=nohyphenation]{hyphsubst}
 
 \ifPDFTeX
-	\usepackage[utf8]{inputenc}
-	\usepackage[vietnamese]{babel}
+  \usepackage[utf8]{inputenc}
+  \usepackage[vietnamese]{babel}
 \else
-	% Other engines (e.g. XeTeX or LuaTeX)
+  % Other engines (e.g. XeTeX or LuaTeX)
 
-	\usepackage[vietnamese]{babel}
-	\usepackage{fontspec}
-	\usepackage{unicode-math}
-	\setmonofont{Consolas}
+  \usepackage[vietnamese]{babel}
+  \usepackage{fontspec}
+  \usepackage{unicode-math}
+  \setmonofont{Consolas}
 
-	% Requires the following font files
-	\setmainfont{texgyrepagella-regular}[
-		Path			= ./qpl2_501otf/,
-		Extension		= .otf,
-		BoldFont		= texgyrepagella-bold,
-		ItalicFont		= texgyrepagella-italic,
-		BoldItalicFont	= texgyrepagella-bolditalic
-	]
-	\setmathfont{texgyrepagella-math}[
-		Path			= ./qpl2_501otf/,
-		Extension		= .otf
-	]
+  % Requires the following font files
+  \setmainfont{texgyrepagella-regular}[
+    Path      = ./qpl2_501otf/,
+    Extension   = .otf,
+    BoldFont    = texgyrepagella-bold,
+    ItalicFont    = texgyrepagella-italic,
+    BoldItalicFont  = texgyrepagella-bolditalic
+  ]
+  \setmathfont{texgyrepagella-math}[
+    Path      = ./qpl2_501otf/,
+    Extension   = .otf
+  ]
 
-	% \setmainfont{Times New Roman}
+  % \setmainfont{Times New Roman}
 \fi

@@ -8,10 +8,10 @@
 
 \newcommand{\image}[4][1]{
 \begin{figure}[ht!]
-	\includegraphics[trim=0 0 0 -2cm,width=#1\textwidth,keepaspectratio]{#2}
-	\centering
-	\caption{#3}
-	\label{#4}
+  \includegraphics[trim=0 0 0 -2cm,width=#1\textwidth,keepaspectratio]{#2}
+  \centering
+  \caption{#3}
+  \label{#4}
 \end{figure}
 } 
 % Example usage
@@ -20,19 +20,19 @@
 
 \newcommand{\doubleimage}[7][0.4]{ 
 \begin{figure}[ht!]
-	\centering
-	\begin{subfigure}{.5\textwidth}
-		\centering
-		\includegraphics[width=#1\linewidth]{#2}
-		\caption{#3}
-	\end{subfigure}%
-	\begin{subfigure}{.5\textwidth}
-		\centering
-		\includegraphics[width=#1\linewidth]{#4}
-		\caption{#5}
-	\end{subfigure}
-	\caption{#6}
-	\label{#7}
+  \centering
+  \begin{subfigure}{.5\textwidth}
+    \centering
+    \includegraphics[width=#1\linewidth]{#2}
+    \caption{#3}
+  \end{subfigure}%
+  \begin{subfigure}{.5\textwidth}
+    \centering
+    \includegraphics[width=#1\linewidth]{#4}
+    \caption{#5}
+  \end{subfigure}
+  \caption{#6}
+  \label{#7}
 \end{figure} 
 }
 % Example usage
