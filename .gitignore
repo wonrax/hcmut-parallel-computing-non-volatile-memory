@@ -1,5 +1,5 @@
 # Ignore compiled pdf for now
-# *.pdf
+*.pdf
 
 ## Core latex/pdflatex auxiliary files:
 *.aux
