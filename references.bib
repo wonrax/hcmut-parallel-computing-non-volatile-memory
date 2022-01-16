@@ -1,7 +1,338 @@
-@misc{wiki:skein_permutation,
-	author = "Wikimedia Commons",
-	title = "File:Skein permutation.png --- Wikimedia Commons{,} the free media repository",
-	year = "2020",
-	url = {https://commons.wikimedia.org/w/index.php?title=File:Skein_permutation.png&oldid=459303740"},
-	note = "[Online; truy cập lần cuối 29-March-2021]"
+
+@inproceedings{arulrajLetTalkStorage2015,
+  title = {Let's {{Talk About Storage}} \& {{Recovery Methods}} for {{Non-Volatile Memory Database Systems}}},
+  booktitle = {Proceedings of the 2015 {{ACM SIGMOD International Conference}} on {{Management}} of {{Data}}},
+  author = {Arulraj, Joy and Pavlo, Andrew and Dulloor, Subramanya R.},
+  year = {2015},
+  month = may,
+  series = {{{SIGMOD}} '15},
+  pages = {707--722},
+  publisher = {{Association for Computing Machinery}},
+  address = {{New York, NY, USA}},
+  doi = {10.1145/2723372.2749441},
+  url = {https://doi.org/10.1145/2723372.2749441},
+  urldate = {2022-01-15},
+  abstract = {The advent of non-volatile memory (NVM) will fundamentally change the dichotomy between memory and durable storage in database management systems (DBMSs). These new NVM devices are almost as fast as DRAM, but all writes to it are potentially persistent even after power loss. Existing DBMSs are unable to take full advantage of this technology because their internal architectures are predicated on the assumption that memory is volatile. With NVM, many of the components of legacy DBMSs are unnecessary and will degrade the performance of data intensive applications. To better understand these issues, we implemented three engines in a modular DBMS testbed that are based on different storage management architectures: (1) in-place updates, (2) copy-on-write updates, and (3) log-structured updates. We then present NVM-aware variants of these architectures that leverage the persistence and byte-addressability properties of NVM in their storage and recovery methods. Our experimental evaluation on an NVM hardware emulator shows that these engines achieve up to 5.5X higher throughput than their traditional counterparts while reducing the amount of wear due to write operations by up to 2X. We also demonstrate that our NVM-aware recovery protocols allow these engines to recover almost instantaneously after the DBMS restarts.},
+  isbn = {978-1-4503-2758-9},
+  keywords = {non-volatile memory,oltp,recovery,storage engines}
 }
+
+@article{bezNonvolatileMemoryTechnologies2004,
+  title = {Non-Volatile Memory Technologies: Emerging Concepts and New Materials},
+  shorttitle = {Non-Volatile Memory Technologies},
+  author = {Bez, Roberto and Pirovano, Agostino},
+  year = {2004},
+  month = jan,
+  journal = {Materials Science in Semiconductor Processing},
+  series = {Papers Presented at the {{E-MRS}} 2004 {{Spring Meeting Symposium C}}: {{New Materials}} in {{Future Silicon Technology}}},
+  volume = {7},
+  number = {4},
+  pages = {349--355},
+  issn = {1369-8001},
+  doi = {10.1016/j.mssp.2004.09.127},
+  url = {https://www.sciencedirect.com/science/article/pii/S1369800104001003},
+  urldate = {2022-01-15},
+  abstract = {The current mainstream, based on the Flash technology, is expected to be the reference technology also for the next few years. Nevertheless Flash has technological and physical constraints that make more difficult their further scaling. In this contest there is the industrial interest for alternative technologies that exploit new materials and concepts to go beyond the Flash technology, to allow better scaling, and to enlarge the memory performance. The main emerging non-volatile memory technologies based on inorganic material, like ferroelectric memory (FeRAM), magnetoresistive memory (MRAM) or phase change memory (PCM) and the main innovative concepts based on organic material like ferroelectric or conductance switching polymer will therefore be analysed. We will then focus the attention on PCM technology as one of the best candidate as next-decade non-volatile memory technology, covering the main characteristics and presenting the latest development results.},
+  langid = {english}
+}
+
+@article{burrNeuromorphicComputingUsing2017,
+  title = {Neuromorphic Computing Using Non-Volatile Memory},
+  author = {Burr, Geoffrey W. and Shelby, Robert M. and Sebastian, Abu and Kim, Sangbum and Kim, Seyoung and Sidler, Severin and Virwani, Kumar and Ishii, Masatoshi and Narayanan, Pritish and Fumarola, Alessandro and Sanches, Lucas L. and Boybat, Irem and Le Gallo, Manuel and Moon, Kibong and Woo, Jiyoo and Hwang, Hyunsang and Leblebici, Yusuf},
+  year = {2017},
+  month = jan,
+  journal = {Advances in Physics: X},
+  volume = {2},
+  number = {1},
+  pages = {89--124},
+  publisher = {{Taylor \& Francis}},
+  issn = {null},
+  doi = {10.1080/23746149.2016.1259585},
+  url = {https://doi.org/10.1080/23746149.2016.1259585},
+  urldate = {2022-01-15},
+  abstract = {Dense crossbar arrays of non-volatile memory (NVM) devices represent one possible path for implementing massively-parallel and highly energy-efficient neuromorphic computing systems. We first review recent advances in the application of NVM devices to three computing paradigms: spiking neural networks (SNNs), deep neural networks (DNNs), and ‘Memcomputing’. In SNNs, NVM synaptic connections are updated by a local learning rule such as spike-timing-dependent-plasticity, a computational approach directly inspired by biology. For DNNs, NVM arrays can represent matrices of synaptic weights, implementing the matrix–vector multiplication needed for algorithms such as backpropagation in an analog yet massively-parallel fashion. This approach could provide significant improvements in power and speed compared to GPU-based DNN training, for applications of commercial significance. We then survey recent research in which different types of NVM devices – including phase change memory, conductive-bridging RAM, filamentary and non-filamentary RRAM, and other NVMs – have been proposed, either as a synapse or as a neuron, for use within a neuromorphic computing application. The relevant virtues and limitations of these devices are assessed, in terms of properties such as conductance dynamic range, (non)linearity and (a)symmetry of conductance response, retention, endurance, required switching power, and device variability.},
+  keywords = {Neuromorphic computing,non-volatile memory,NVM-based neurons,NVM-based synapses,spike-timing-dependent-plasticity,spiking neural networks,vector–matrix multiplication},
+  annotation = {\_eprint: https://doi.org/10.1080/23746149.2016.1259585}
+}
+
+@article{chenReviewEmergingNonvolatile2016,
+  title = {A Review of Emerging Non-Volatile Memory ({{NVM}}) Technologies and Applications},
+  author = {Chen, An},
+  year = {2016},
+  month = nov,
+  journal = {Solid-State Electronics},
+  series = {Extended Papers Selected from {{ESSDERC}} 2015},
+  volume = {125},
+  pages = {25--38},
+  issn = {0038-1101},
+  doi = {10.1016/j.sse.2016.07.006},
+  url = {https://www.sciencedirect.com/science/article/pii/S0038110116300867},
+  urldate = {2022-01-15},
+  abstract = {This paper will review emerging non-volatile memory (NVM) technologies, with the focus on phase change memory (PCM), spin-transfer-torque random-access-memory (STTRAM), resistive random-access-memory (RRAM), and ferroelectric field-effect-transistor (FeFET) memory. These promising NVM devices are evaluated in terms of their advantages, challenges, and applications. Their performance is compared based on reported parameters of major industrial test chips. Memory selector devices and cell structures are discussed. Changing market trends toward low power (e.g., mobile, IoT) and data-centric applications create opportunities for emerging NVMs. High-performance and low-cost emerging NVMs may simplify memory hierarchy, introduce non-volatility in logic gates and circuits, reduce system power, and enable novel architectures. Storage-class memory (SCM) based on high-density NVMs could fill the performance and density gap between memory and storage. Some unique characteristics of emerging NVMs can be utilized for novel applications beyond the memory space, e.g., neuromorphic computing, hardware security, etc. In the beyond-CMOS era, emerging NVMs have the potential to fulfill more important functions and enable more efficient, intelligent, and secure computing systems.},
+  langid = {english},
+  keywords = {Emerging architecture,FeFET,Hardware security,Memory hierarchy,Neuromorphic computing,Nonvolatile memory,PCM,RRAM,Selector,Storage,STTRAM}
+}
+
+@inproceedings{coburnNVHeapsMakingPersistent2011,
+  title = {{{NV-Heaps}}: Making Persistent Objects Fast and Safe with next-Generation, Non-Volatile Memories},
+  shorttitle = {{{NV-Heaps}}},
+  booktitle = {Proceedings of the Sixteenth International Conference on {{Architectural}} Support for Programming Languages and Operating Systems},
+  author = {Coburn, Joel and Caulfield, Adrian M. and Akel, Ameen and Grupp, Laura M. and Gupta, Rajesh K. and Jhala, Ranjit and Swanson, Steven},
+  year = {2011},
+  month = mar,
+  series = {{{ASPLOS XVI}}},
+  pages = {105--118},
+  publisher = {{Association for Computing Machinery}},
+  address = {{New York, NY, USA}},
+  doi = {10.1145/1950365.1950380},
+  url = {https://doi.org/10.1145/1950365.1950380},
+  urldate = {2022-01-13},
+  abstract = {Persistent, user-defined objects present an attractive abstraction for working with non-volatile program state. However, the slow speed of persistent storage (i.e., disk) has restricted their design and limited their performance. Fast, byte-addressable, non-volatile technologies, such as phase change memory, will remove this constraint and allow programmers to build high-performance, persistent data structures in non-volatile storage that is almost as fast as DRAM. Creating these data structures requires a system that is lightweight enough to expose the performance of the underlying memories but also ensures safety in the presence of application and system failures by avoiding familiar bugs such as dangling pointers, multiple free()s, and locking errors. In addition, the system must prevent new types of hard-to-find pointer safety bugs that only arise with persistent objects. These bugs are especially dangerous since any corruption they cause will be permanent. We have implemented a lightweight, high-performance persistent object system called NV-heaps that provides transactional semantics while preventing these errors and providing a model for persistence that is easy to use and reason about. We implement search trees, hash tables, sparse graphs, and arrays using NV-heaps, BerkeleyDB, and Stasis. Our results show that NV-heap performance scales with thread count and that data structures implemented using NV-heaps out-perform BerkeleyDB and Stasis implementations by 32x and 244x, respectively, by avoiding the operating system and minimizing other software overheads. We also quantify the cost of enforcing the safety guarantees that NV-heaps provide and measure the costs of NV-heap primitive operations.},
+  isbn = {978-1-4503-0266-1},
+  keywords = {acid transactions,memory mangement,non-volatile heap,persistent objects,phase-change memory,pointer safety,spin-torque transfer memory,transactional memory}
+}
+
+@article{eisenmanBandanaUsingNonVolatile2019,
+  title = {Bandana: {{Using Non-Volatile Memory}} for {{Storing Deep Learning Models}}},
+  shorttitle = {Bandana},
+  author = {Eisenman, Assaf and Naumov, Maxim and Gardner, Darryl and Smelyanskiy, Misha and Pupyrev, Sergey and Hazelwood, Kim and Cidon, Asaf and Katti, Sachin},
+  year = {2019},
+  month = apr,
+  journal = {Proceedings of Machine Learning and Systems},
+  volume = {1},
+  pages = {40--52},
+  url = {https://proceedings.mlsys.org/paper/2019/hash/34173cb38f07f89ddbebc2ac9128303f-Abstract.html},
+  urldate = {2022-01-15},
+  langid = {english}
+}
+
+@inproceedings{guptaFailuresLargeScale2017,
+  title = {Failures in Large Scale Systems: Long-Term Measurement, Analysis, and Implications},
+  shorttitle = {Failures in Large Scale Systems},
+  booktitle = {Proceedings of the {{International Conference}} for {{High Performance Computing}}, {{Networking}}, {{Storage}} and {{Analysis}}},
+  author = {Gupta, Saurabh and Patel, Tirthak and Engelmann, Christian and Tiwari, Devesh},
+  year = {2017},
+  month = nov,
+  series = {{{SC}} '17},
+  pages = {1--12},
+  publisher = {{Association for Computing Machinery}},
+  address = {{New York, NY, USA}},
+  doi = {10.1145/3126908.3126937},
+  url = {https://doi.org/10.1145/3126908.3126937},
+  urldate = {2022-01-13},
+  abstract = {Resilience is one of the key challenges in maintaining high efficiency of future extreme scale supercomputers. Researchers and system practitioners rely on field-data studies to understand reliability characteristics and plan for future HPC systems. In this work, we compare and contrast the reliability characteristics of multiple large-scale HPC production systems. Our study covers more than one billion compute node hours across five different systems over a period of 8 years. We confirm previous findings which continue to be valid, discover new findings, and discuss their implications.},
+  isbn = {978-1-4503-5114-0}
+}
+
+@article{leePhaseChangeTechnologyFuture2010,
+  title = {Phase-{{Change Technology}} and the {{Future}} of {{Main Memory}}},
+  author = {Lee, Benjamin C. and Zhou, Ping and Yang, Jun and Zhang, Youtao and Zhao, Bo and Ipek, Engin and Mutlu, Onur and Burger, Doug},
+  year = {2010},
+  month = jan,
+  journal = {IEEE Micro},
+  volume = {30},
+  number = {1},
+  pages = {143--143},
+  issn = {1937-4143},
+  doi = {10.1109/MM.2010.24},
+  abstract = {Phase-change may enable continued scaling of main memories, but PCM has higher access latencies, incurs higher power costs, and wears out more quickly than DRAM. This article discusses how to mitigate these limitations through buffer sizing, row caching, write reduction, and wear leveling, to make PCM a viable dream alternative for scalable main memories.},
+  keywords = {Costs,Delay,DRAM,energy efficiency,Flash memory,Material storage,memory architecture,Nonvolatile memory,PCM,Phase change materials,Phase change memory,phase-change memory,Prototypes,Random access memory,Space technology,technology scaling}
+}
+
+@inproceedings{liuPerformanceEvaluationModeling2017,
+  title = {Performance {{Evaluation}} and {{Modeling}} of {{HPC I}}/{{O}} on {{Non-Volatile Memory}}},
+  booktitle = {2017 {{International Conference}} on {{Networking}}, {{Architecture}}, and {{Storage}} ({{NAS}})},
+  author = {Liu, Wei and Wu, Kai and Liu, Jialin and Chen, Feng and Li, Dong},
+  year = {2017},
+  month = aug,
+  pages = {1--10},
+  doi = {10.1109/NAS.2017.8026869},
+  abstract = {HPC applications pose high demands on I/O performance and storage capability. The emerging non-volatile memory (NVM) techniques offer low- latency, high bandwidth, and persistence for HPC applications. However, the existing I/O stack are designed and optimized based on an assumption of disk-based storage. To effectively use NVM, we must re-examine the existing high performance computing (HPC) I/O sub-system to properly integrate NVM into it. Using NVM as a fast storage, the previous assumption on the inferior performance of storage (e.g., hard drive) is not valid any more. The performance problem caused by slow storage may be mitigated; the existing mechanisms to narrow the performance gap between storage and CPU may be unnecessary and result in large overhead. Thus fully understanding the impact of introducing NVM into the HPC software stack demands a thorough performance study. In this paper, we analyze and model the performance of I/O intensive HPC applications with NVM as a block device. We study the performance from three perspectives: (1) the impact of NVM on the performance of traditional page cache; (2) a performance comparison between MPI individual I/O and POSIX I/O; and (3) the impact of NVM on the performance of collective I/O. We reveal the diminishing effects of page cache, minor performance difference between MPI individual I/O and POSIX I/O, and performance disadvantage of collective I/O on NVM due to unnecessary data shuffling. We also model the performance of MPI collective I/O and study the complex interaction between data shuffling, storage performance, and I/O access patterns.},
+  keywords = {Bandwidth,Benchmark testing,Brain modeling,Data models,Nonvolatile memory,Performance evaluation,Random access memory}
+}
+
+@book{magyari-kopeAdvancesNonVolatileMemory2019,
+  title = {Advances in {{Non-Volatile Memory}} and {{Storage Technology}}},
+  author = {{Magyari-Kope}, Blanka and Nishi, Yoshio},
+  year = {2019},
+  series = {Woodhead {{Publishing Series}} in {{Electronic}} and {{Optical Materials}}},
+  edition = {Second},
+  publisher = {{Elsevier Science \& Technology}},
+  url = {http://gen.lib.rus.ec/book/index.php?md5=E0713A78F32AA52EA24FE704D396BBFC},
+  urldate = {2022-01-15},
+  isbn = {978-0-08-102585-7}
+}
+
+@misc{MemoryRAMFlash,
+  title = {Memory - {{RAM}} and {{Flash}} Structure Difference},
+  journal = {Electrical Engineering Stack Exchange},
+  url = {https://electronics.stackexchange.com/questions/454140/ram-and-flash-structure-difference},
+  urldate = {2022-01-15},
+  note = {Truy cập lần cuối 2022-01-15}
+}
+
+@incollection{nishiWoodheadPublishingSeries2014,
+  title = {Woodhead {{Publishing Series}} in {{Electronic}} and {{Optical Materials}}},
+  booktitle = {Advances in {{Non-volatile Memory}} and {{Storage Technology}}},
+  editor = {Nishi, Yoshio},
+  year = {2014},
+  month = jan,
+  pages = {xv-xix},
+  publisher = {{Woodhead Publishing}},
+  doi = {10.1016/B978-0-85709-803-0.50019-9},
+  url = {https://www.sciencedirect.com/science/article/pii/B9780857098030500199},
+  urldate = {2022-01-15},
+  isbn = {978-0-85709-803-0},
+  langid = {english}
+}
+
+@inproceedings{renExploringNonVolatilityNonVolatile2020,
+  title = {Exploring {{Non-Volatility}} of {{Non-Volatile Memory}} for {{High Performance Computing Under Failures}}},
+  booktitle = {2020 {{IEEE International Conference}} on {{Cluster Computing}} ({{CLUSTER}})},
+  author = {Ren, Jie and Wu, Kai and Li, Dong},
+  year = {2020},
+  month = sep,
+  pages = {237--247},
+  issn = {2168-9253},
+  doi = {10.1109/CLUSTER49012.2020.00034},
+  abstract = {Hardware failures and faults often result in application crash in HPC. The emergence of non-volatile memory (NVM) provides a solution to address this problem. Leveraging the nonvolatility of NVM, one can build in-memory checkpoints or enable crash-consistent data objects. However, these solutions cause large memory consumption, extra writes to NVM, or disruptive changes to applications. We introduces a fundamentally new methodology to handle HPC under failures based on NVM. In particular, we attempt to use remaining data objects in NVM (possibly stale ones because of losing data updates in caches) to restart crashed applications. To address the challenge of possibly unsuccessful recomputation after the application restarts, we introduce a framework EasyCrash that uses a systematic approach to automatically decide how to selectively persist application data objects to significantly increase possibility of successful recomputation. EasyCrash enables up to 30\% improvement (20\% on average) in system efficiency at various system scales.},
+  keywords = {Computer crashes,Hardware,High performance computing,Maintenance engineering,Memory management,Nonvolatile memory,Systematics}
+}
+
+@article{sanvidoNandFlashMemory2008a,
+  title = {Nand {{Flash Memory}} and {{Its Role}} in {{Storage Architectures}}},
+  author = {Sanvido, Marco A. A. and Chu, Frank R. and Kulkarni, Anand and Selinger, Robert},
+  year = {2008},
+  month = nov,
+  journal = {Proceedings of the IEEE},
+  volume = {96},
+  number = {11},
+  pages = {1864--1874},
+  issn = {1558-2256},
+  doi = {10.1109/JPROC.2008.2004319},
+  abstract = {This papers reviews the increasing role of NAND flash memory in storage architectures. NAND flash has enjoyed a phenomenal growth rate in storage capacities as well as a steady decline in pricing during the past few years. These developments have enabled NAND to enter and possibly change or displace some traditional storage architectures. However, besides cost, NAND flash memory has some reliability and performance issues that will slow its adoption into all storage architectures. This paper will analyze the advantages and disadvantages of this technology and the implications to the current and possible future storage architectures. Moreover, we will analyze NAND flash future density and costs trends and compare them with the traditional hard disk drive.},
+  keywords = {Computer architecture,Costs,Digital cameras,Disk drives,EPROM,hard disks,Hard disks,Memory architecture,memory architectures,Random access memory,Read-write memory,semiconductor memories,Semiconductor memory,Silicon}
+}
+
+@misc{securityINVMMSecuringNonvolatile,
+  title = {I-{{NVMM}}: {{Securing}} Non-Volatile Memory on the Fly},
+  shorttitle = {I-{{NVMM}}},
+  author = {Security, Michael Kassner in IT and on August 1, in Hardware and {2011} and Pst, 12:01 Am},
+  journal = {TechRepublic},
+  url = {https://www.techrepublic.com/blog/it-security/i-nvmm-securing-non-volatile-memory-on-the-fly/},
+  urldate = {2022-01-13},
+  abstract = {Computer memory is a treasure of unencrypted information. Fortunately, power off and it disappears. That's not the case with next-generation memory.},
+  langid = {english},
+  note = {Truy cập lần cuối 2022-01-13}
+}
+
+@article{srinivasanStudyChallengesProspects2013,
+  title = {A {{Study}} on the {{Challenges}} and {{Prospects}} of {{PCM Based Main Memory Architectures}}},
+  author = {Srinivasan, Rajarajan and Prabhu, M. and Arunkumar, Sabari and Karthikeyan, M},
+  year = {2013},
+  month = dec,
+  journal = {Middle East Journal of Scientific Research},
+  volume = {18},
+  pages = {788--795},
+  doi = {10.5829/idosi.mejsr.2013.18.6.12500},
+  abstract = {For several decades, computer's memory has been volatile. High speed memories such as DRAM and SRAM have been used as main memory and cache memory respectively. Magnetic disks are used as the persistent secondary storage devices. The present DRAM based main memory has reached its energy lits. Due to the advent of nonvolatile memories like PCM, MRAM, RRAM, FeRAM and Flash, there is growing interest in incorporating them into the computers as the main memory alternates. Introducing the non-volatile storage devices in memory hierarchy is considered to reduce the energy consumption since non-volatile memories have got no power leakage in memory cells. A major hurdle in this direction is the poor the endurance limit of most non-volatile memory technologies in comparison to the RAM technologies. Among the non-volatile memory technologies, PCM is the most attractive and the most investigated option due to it advantages over other memory types. But there are few issues related to PCM that need to be addressed in order to integrate it as a potential memory for computers. There have been intense researches being carried out to devise new memory architectures based on PCM. There are also methods identified to overcome the issues of PCM. This paper analyses the various challenges in integrating PCM into the system and the various PCM based main memory architectures that have been proposed so far. INTRODUCTION memory capacity. A number of non-volatile memories are}
+}
+
+@article{suzukiSurveyTrendsNonVolatile2015a,
+  title = {A {{Survey}} of {{Trends}} in {{Non-Volatile Memory Technologies}}: 2000-2014},
+  shorttitle = {A {{Survey}} of {{Trends}} in {{Non-Volatile Memory Technologies}}},
+  author = {Suzuki, Kosuke and Swanson, S.},
+  year = {2015},
+  journal = {2015 IEEE International Memory Workshop (IMW)},
+  doi = {10.1109/IMW.2015.7150274},
+  abstract = {A survey of non-volatile memory technology papers published between 2000 and 2014 in leading journals and conference proceedings in the area of integrated circuit design and semiconductor devices is presented. We present a survey of non-volatile memory technology papers published between 2000 and 2014 in leading journals and conference proceedings in the area of integrated circuit design and semiconductor devices. We present a summary of the data provided in these papers and use that data to model basic aspects of their performance at an architectural level. The full data set and complete bibliography will be published online.}
+}
+
+@inproceedings{venkataramanConsistentDurableData2011a,
+  title = {Consistent and Durable Data Structures for Non-Volatile Byte-Addressable Memory},
+  booktitle = {Proceedings of the 9th {{USENIX}} Conference on {{File}} and Stroage Technologies},
+  author = {Venkataraman, Shivaram and Tolia, Niraj and Ranganathan, Parthasarathy and Campbell, Roy H.},
+  year = {2011},
+  month = feb,
+  series = {{{FAST}}'11},
+  pages = {5},
+  publisher = {{USENIX Association}},
+  address = {{USA}},
+  abstract = {The predicted shift to non-volatile, byte-addressable memory (e.g., Phase Change Memory and Memristor), the growth of "big data", and the subsequent emergence of frameworks such as memcached and NoSQL systems require us to rethink the design of data stores. To derive the maximum performance from these new memory technologies, this paper proposes the use of single-level data stores. For these systems, where no distinction is made between a volatile and a persistent copy of data, we present Consistent and Durable Data Structures (CDDSs) that, on current hardware, allows programmers to safely exploit the low-latency and non-volatile aspects of new memory technologies. CDDSs use versioning to allow atomic updates without requiring logging. The same versioning scheme also enables rollback for failure recovery. When compared to a memory-backed Berkeley DB B-Tree, our prototype-based results show that a CDDS B-Tree can increase put and get throughput by 74\% and 138\%. When compared to Cassandra, a two-level data store, Tembo, a CDDS B-Tree enabled distributed Key-Value system, increases throughput by up to 250\%-286\%.},
+  isbn = {978-1-931971-82-9}
+}
+
+@misc{VolatileNonVolatileComputer,
+  title = {Volatile and {{Non-Volatile Computer Memory}} | {{Ivy Tech College Success}} 115},
+  url = {https://courses.lumenlearning.com/collegesuccess2x48x115/chapter/volatile-and-non-volatile-computer-memory-session-6/},
+  urldate = {2022-01-15},
+  note = {Truy cập lần cuối 2022-01-15}
+}
+
+@inproceedings{weilandEarlyEvaluationIntel2019,
+  title = {An Early Evaluation of {{Intel}}'s Optane {{DC}} Persistent Memory Module and Its Impact on High-Performance Scientific Applications},
+  booktitle = {Proceedings of the {{International Conference}} for {{High Performance Computing}}, {{Networking}}, {{Storage}} and {{Analysis}}},
+  author = {Weiland, Michèle and Brunst, Holger and Quintino, Tiago and Johnson, Nick and Iffrig, Olivier and Smart, Simon and Herold, Christian and Bonanni, Antonino and Jackson, Adrian and Parsons, Mark},
+  year = {2019},
+  month = nov,
+  series = {{{SC}} '19},
+  pages = {1--19},
+  publisher = {{Association for Computing Machinery}},
+  address = {{New York, NY, USA}},
+  doi = {10.1145/3295500.3356159},
+  url = {https://doi.org/10.1145/3295500.3356159},
+  urldate = {2022-01-14},
+  abstract = {Memory and I/O performance bottlenecks in supercomputing simulations are two key challenges that must be addressed on the road to Exascale. The new byte-addressable persistent non-volatile memory technology from Intel, DCPMM, promises to be an exciting opportunity to break with the status quo, with unprecedented levels of capacity at near-DRAM speeds. Here, we explore the potential of DCPMM in the context of two high-performance scientific applications in terms of outright performance, efficiency and usability for both its Memory and App Direct modes. In Memory mode, we show equivalent performance and better efficiency for a CASTEP simulation that is limited by memory capacity on conventional DRAM-only systems without any changes to the application. For IFS, we demonstrate that a distributed object-store over NVRAM reduces the data contention created in weather forecasting data producer-consumer workflows. In addition, we also present the achievable memory bandwidth performance using STREAM.},
+  isbn = {978-1-4503-6229-0},
+  keywords = {IO performance,non-volatile memory}
+}
+
+@misc{WhatNonVolatileMemory,
+  title = {What Is {{Non-Volatile Memory}} ({{NVM}})? - {{Definition}} from {{Techopedia}}},
+  shorttitle = {What Is {{Non-Volatile Memory}} ({{NVM}})?},
+  journal = {Techopedia.com},
+  url = {http://www.techopedia.com/definition/2793/non-volatile-memory-nvm},
+  urldate = {2022-01-15},
+  abstract = {This definition explains the meaning of Non-Volatile Memory and why it matters.},
+  langid = {english},
+  note = {Truy cập lần cuối 2022-01-15}
+}
+
+@inproceedings{zhangMojimReliableHighlyAvailable2015,
+  title = {Mojim: {{A Reliable}} and {{Highly-Available Non-Volatile Memory System}}},
+  shorttitle = {Mojim},
+  booktitle = {Proceedings of the {{Twentieth International Conference}} on {{Architectural Support}} for {{Programming Languages}} and {{Operating Systems}}},
+  author = {Zhang, Yiying and Yang, Jian and Memaripour, Amirsaman and Swanson, Steven},
+  year = {2015},
+  month = mar,
+  series = {{{ASPLOS}} '15},
+  pages = {3--18},
+  publisher = {{Association for Computing Machinery}},
+  address = {{New York, NY, USA}},
+  doi = {10.1145/2694344.2694370},
+  url = {https://doi.org/10.1145/2694344.2694370},
+  urldate = {2022-01-15},
+  abstract = {Next-generation non-volatile memories (NVMs) promise DRAM-like performance, persistence, and high density. They can attach directly to processors to form non-volatile main memory (NVMM) and offer the opportunity to build very low-latency storage systems. These high-performance storage systems would be especially useful in large-scale data center environments where reliability and availability are critical. However, providing reliability and availability to NVMM is challenging, since the latency of data replication can overwhelm the low latency that NVMM should provide. We propose Mojim, a system that provides the reliability and availability that large-scale storage systems require, while preserving the performance of NVMM. Mojim achieves these goals by using a two-tier architecture in which the primary tier contains a mirrored pair of nodes and the secondary tier contains one or more secondary backup nodes with weakly consistent copies of data. Mojim uses highly-optimized replication protocols, software, and networking stacks to minimize replication costs and expose as much of NVMM?s performance as possible. We evaluate Mojim using raw DRAM as a proxy for NVMM and using an industrial NVMM emulation system. We find that Mojim provides replicated NVMM with similar or even better performance than un-replicated NVMM (reducing latency by 27\% to 63\% and delivering between 0.4 to 2.7X the throughput). We demonstrate that replacing MongoDB's built-in replication system with Mojim improves MongoDB's performance by 3.4 to 4X.},
+  isbn = {978-1-4503-2835-7},
+  keywords = {availability,data center,distributed storage systems,keywords non-volatile memory,reliability,storage-class memory}
+}
+
+@inproceedings{zhouDurableEnergyEfficient2009,
+  title = {A Durable and Energy Efficient Main Memory Using Phase Change Memory Technology},
+  booktitle = {Proceedings of the 36th Annual International Symposium on {{Computer}} Architecture},
+  author = {Zhou, Ping and Zhao, Bo and Yang, Jun and Zhang, Youtao},
+  year = {2009},
+  month = jun,
+  series = {{{ISCA}} '09},
+  pages = {14--23},
+  publisher = {{Association for Computing Machinery}},
+  address = {{New York, NY, USA}},
+  doi = {10.1145/1555754.1555759},
+  url = {https://doi.org/10.1145/1555754.1555759},
+  urldate = {2022-01-13},
+  abstract = {Using nonvolatile memories in memory hierarchy has been investigated to reduce its energy consumption because nonvolatile memories consume zero leakage power in memory cells. One of the difficulties is, however, that the endurance of most nonvolatile memory technologies is much shorter than the conventional SRAM and DRAM technology. This has limited its usage to only the low levels of a memory hierarchy, e.g., disks, that is far from the CPU. In this paper, we study the use of a new type of nonvolatile memories -- the Phase Change Memory (PCM) as the main memory for a 3D stacked chip. The main challenges we face are the limited PCM endurance, longer access latencies, and higher dynamic power compared to the conventional DRAM technology. We propose techniques to extend the endurance of the PCM to an average of 13 (for MLC PCM cell) to 22 (for SLC PCM) years. We also study the design choices of implementing PCM to achieve the best tradeoff between energy and performance. Our design reduced the total energy of an already low-power DRAM main memory of the same capacity by 65\%, and energy-delay2 product by 60\%. These results indicate that it is feasible to use PCM technology in place of DRAM in the main memory for better energy efficiency.},
+  isbn = {978-1-60558-526-0},
+  keywords = {endurance,low power,phase change memory}
+}
+
+

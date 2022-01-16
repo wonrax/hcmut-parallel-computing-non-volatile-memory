@@ -1,24 +1,37 @@
-\section{Các mô hình}
-\label{chap:models}
+\section{Non-volatile memory}
+\label{chap:non-volatile-memory}
 
-Sollicitudin tempor id eu nisl nunc. Ut sem viverra aliquet eget sit amet
-tellus. Cras ornare arcu dui vivamus arcu felis bibendum ut tristique. Platea
-dictumst vestibulum rhoncus est pellentesque. Convallis posuere morbi leo urna
-molestie at elementum. Vestibulum lectus mauris ultrices eros in cursus turpis.
-Faucibus ornare suspendisse sed nisi lacus sed. Donec adipiscing tristique
-risus nec feugiat in fermentum posuere. Augue eget arcu dictum varius duis at
-consectetur lorem. Auctor augue mauris augue neque gravida in fermentum. Id
-aliquet lectus proin nibh nisl condimentum id. Feugiat nisl pretium fusce id
-velit ut. Euismod nisi porta lorem mollis aliquam ut porttitor leo. Montes
-nascetur ridiculus mus mauris vitae ultricies. Pharetra convallis posuere morbi
-leo urna molestie at. In nisl nisi scelerisque eu ultrices vitae auctor eu
-augue. Quis blandit turpis cursus in hac habitasse platea dictumst quisque.
-Orci eu lobortis elementum nibh tellus molestie nunc non. Sollicitudin nibh sit
-amet commodo. Nullam non nisi est sit amet facilisis magna etiam.
+Bộ nhớ (memory) là thiết bị dùng để lưu trữ dữ liệu cho máy tính. Bộ nhớ chính
+(primary memory) được dùng cho các tác vụ yêu cầu tốc độ cao, bộ nhớ thứ cấp
+(secondary memory) tuy có tốc độ chậm hơn nhưng có thể chứa được nhiều dữ liệu
+hơn. Nếu cần thiết, các dữ liệu ở bộ nhớ chính có thể được lưu trữ ở bộ nhớ thứ
+cấp thông qua kỹ thuật quản lý bộ nhớ gọi là bộ nhớ ảo (virtual
+memory)~\cite{VolatileNonVolatileComputer}.
 
-\image[0.7]{img/logo/LogoBKChinhThuc.png}{Logo HCMUT}{fig:logo}
+Trong các hệ thống tính toán ngày nay, bộ nhớ được chia thành hai loại:
 
-Volutpat maecenas volutpat blandit aliquam. Ipsum dolor sit amet consectetur
-adipiscing elit ut aliquam purus. Leo a diam sollicitudin tempor id eu nisl.
-Velit laoreet id donec ultrices tincidunt arcu. Morbi tincidunt ornare massa
-eget egestas purus viverra.
+\begin{itemize}
+    \item \textbf{Volatile memory (bộ nhớ khả biến)}: là loại bộ nhớ cần điện
+    năng để duy trì trạng thái các dữ liệu trong bộ nhớ. Đa số các bộ nhớ khả
+    biến từ chất bán dẫn rơi vào hai loại: Static RAM (SRAM) hoặc dynamic RAM
+    (DRAM). Đối với SRAM, ta chỉ cần duy trì nguồn điện thì dữ liệu sẽ được lưu
+    giữ trong bộ nhớ, tuy nhiên SRAM cần sử dụng sáu bán dẫn (transistor) cho
+    mỗi bit. Mặt khác, DRAM chỉ cần một bán dẫn cho mỗi bit, qua đó cho phép bộ
+    nhớ có mật độ bit cao hơn. Tuy nhiên, DRAM cần các chu trình làm tươi
+    (refresh cycle) thường xuyên để lưu giữ dữ liệu.
+    
+    \item \textbf{Non-volatile memory (bộ nhớ bất khả biến)}: là loại bộ nhớ có
+    thể lưu trữ dữ liệu ngay cả khi thiết bị không được cung cấp điện năng.
+    Điển hình cho bộ nhớ bất khả biến là các bộ nhớ từ (magnetic storage
+    device, ví dụ như ổ cứng hay đĩa mềm), đĩa quang (optical disc) hay NAND
+    Flash (điển hình là solid state drive hay SSD). Các bộ nhớ bất khả biến có
+    tiềm năng trong tương lai bao gồm FeRAM, CBRAM,PRAM, SONOS, RRAM, Racetrack
+    memory, NRAM và Millipede.
+\end{itemize}
+
+So với non-volatile memory, volatile memory là công nghệ có tốc độ vượt trội
+hơn, tuy nhiên có khả năng mở rộng (scalability) kém hơn. Mục đích của
+non-volatile memory là lưu trữ các dữ liệu mà CPU cần truy cập tức thời. Trong
+khi đó, non-volatile memory được dùng để lưu trữ các dữ liệu sẽ được sử dụng
+trong tương lai.
+
