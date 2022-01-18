@@ -89,6 +89,39 @@ làm mát.
 
 Xét giá thành cho mỗi GB (Gigabyte), HDD hoàn toàn vượt trội so với SSD. Tuy
 nhiên, nếu xét trên toàn hệ thống, ta cần số lượng SSD ít hơn rất nhiều so với
-HDD với tổng hiệu năng như nhau. Nếu kể thêm các chi phí bảo dưỡng, điện năng
-và tiết kiệm không gian, SSD khả năng là một lựa chọn hấp dẫn hơn
+HDD xét trên cùng hiệu năng. Nếu kể thêm các chi phí bảo dưỡng, điện năng
+và tiết kiệm không gian, SSD có khả năng là một lựa chọn hấp dẫn hơn
 HDD~\cite{wongMarketApplicationsNAND2010}.
+
+Hình~\ref{fig:ssd_vs_hdd} cho thấy tốc độ đọc và ghi vượt trội của SSD so với
+HDD. Hơn nữa, trong nhiều năm tới, với công nghệ 3-D NAND, NAND Flash vẫn có khả
+năng tiếp tục tăng dung lượng lưu trữ trên cùng một diện tích silicon, làm cho
+giá thành liên tục giảm xuống trong tương lai. Trong khi đó, giá thành của HDD
+vẫn giữ nguyên trong vòng nhiều năm
+nay~\cite{monziocompagnoniReviewingEvolutionNAND2017}.
+
+\image[1]{img/ssd_vs_hdd.png}{So sánh throughput đọc và ghi giữa HDD và
+SSD.~\cite{monziocompagnoniReviewingEvolutionNAND2017}}{fig:ssd_vs_hdd}
+
+
+\subsection{Phase-change memory}
+Phase-change memory (PCM hoặc PRAM) đã và đang là công nghệ có nhiều hứa hẹn
+trong những năm gần đây. Với vai trò là non-volatile memory với độ trễ thấp và
+có độ tin cậy cao, PCM được coi là giải pháp có tiềm năng trong các hệ thống bộ
+nhớ (memory system). Sự cạnh tranh của PCM với các công nghệ khác dần được tăng
+lên khi PCM giảm được kích thước cell, chuyển từ công nghệ bán dẫn sang kích
+thước nhỏ hơn là đi-ốt (vertical diode). Chúng giúp giảm giá thành thiết bị và
+giảm thiểu chi phí tính toán.
+
+Mục tiêu của thế hệ PCM đầu tiên là cạnh tranh với DRAM: độ trễ đọc và ghi, độ
+bền qua các chu kỳ ghi (cyclic write), retention, v.v. Một vài báo cáo đã cho
+ra kết quả khả quan với độ trễ ghi 120ns, độ trễ đọc 150ns và độ bền có chu kỳ
+lớn hơn 1E9. Tuy nhiên, PCM vẫn chưa đạt được thành công trên thị trường bởi vì
+NAND Flash và DRAM vẫn tiếp tục phát triển nhanh chóng.
+
+Tuy nhiên, với nhu cầu của memory-centric computing và storage-class memory
+(SCM), PCM có thể được dùng để lấp khoảng trống giữa NAND Flash và DRAM. Điều
+này có nghĩa là SCM phải đồng thời rẻ hơn DRAM và nhanh hơn NAND Flash. Để trở
+thành SCM, tốc độ đọc và giá thành của PCM phải tiếp tục được cải thiện nhiều
+hơn nữa.
+
