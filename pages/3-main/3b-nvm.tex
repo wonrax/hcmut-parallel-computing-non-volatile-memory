@@ -37,17 +37,18 @@ thời. Trong khi đó, non-volatile memory được dùng để lưu trữ các
 
 Khi chuyển dữ liệu từ NAND sang DRAM, hiệu suất chung của hệ thống bị giới hạn
 bởi một độ trễ khá lớn do sự khác biệt giữa hai loại bộ nhớ. Sự khác biệt này
-được giảm thiểu bằng các kỹ thuật sử dụng các kiến trúc khác nhau, tuy nhiên
-phải đánh đổi cho sự phức tạp của hệ thống và kích thước chip. Trong những năm
-gần đây, các nhà nghiên cứu đã bắt đầu khám phá các cách thức cải tiến bộ nhớ
-cho phù hợp với kiến trúc bộ nhớ hiện tại. Storage class memory (SCM, tạm dịch
-``bộ nhớ cấp lưu trữ'') được đề xuất để giảm sự khác biệt giữa
-``memory-memory'' và
+được giảm thiểu bằng các kỹ thuật sử dụng các kiến trúc khác nhau, qua đó phải
+đánh đổi cho sự phức tạp của hệ thống và kích thước chip. Trong những năm gần
+đây, các nhà nghiên cứu đã bắt đầu khám phá các cách thức cải tiến bộ nhớ cho
+phù hợp với kiến trúc bộ nhớ hiện tại. Storage class memory (SCM, tạm dịch ``bộ
+nhớ cấp lưu trữ'') được đề xuất để giảm sự khác biệt giữa ``memory-memory'' và
 ``storage-memory''~\cite{gouxOxRAMTechnologyDevelopment2019}.
 
 Để đáp ứng các nhu cầu tính toán hiện nay, các thiết bị bộ nhớ mới được nghiên
 cứu và ra đời. Nổi bật là resistive RAM với spin-transfer torque magnetic RAM
-(STT-MRAM), phase-change RAM (PCRAM) và PRAM hay ReRAM.
+(STT-MRAM), phase-change RAM (PCRAM) và PRAM hay ReRAM. Báo cáo này sẽ tập
+trung nghiên cứu các công nghệ resistive RAM trên, cùng với NAND Flash là công
+nghệ đang thống trị trên thị trường hiện tại.
 
 \subsection{NAND Flash}
 Bộ nhớ Flash được chế tạo bởi TS. Fujio Masuoka tại Toshiba Corp. vào năm 1984.
@@ -104,7 +105,7 @@ nay~\cite{monziocompagnoniReviewingEvolutionNAND2017}.
 SSD.~\cite{monziocompagnoniReviewingEvolutionNAND2017}}{fig:ssd_vs_hdd}
 
 
-\subsection{Phase-change memory}
+\subsection{Phase-change memory (PCM)}
 Phase-change memory (PCM hoặc PRAM) đã và đang là công nghệ có nhiều hứa hẹn
 trong những năm gần đây. Với vai trò là non-volatile memory với độ trễ thấp và
 có độ tin cậy cao, PCM được coi là giải pháp có tiềm năng trong các hệ thống bộ
@@ -112,6 +113,14 @@ nhớ (memory system). Sự cạnh tranh của PCM với các công nghệ khác
 lên khi PCM giảm được kích thước cell, chuyển từ công nghệ bán dẫn sang kích
 thước nhỏ hơn là đi-ốt (vertical diode). Chúng giúp giảm giá thành thiết bị và
 giảm thiểu chi phí tính toán.
+
+Trong PCM, dữ liệu được lưu bằng cách sử dụng sự chênh lệch điện trở giữa pha
+kết tinh có tính dẫn điện (high-conductive crystalline phase) và pha kém kết
+tinh không có tính dẫn điện (low-conductive amorphous phase) của các chất liệu
+chuyển pha (phase-change material). Dữ liệu được lưu trữ sẽ được đọc bằng cách
+đo điện trở của thiết bị PCM. Điểm nổi bật của PCM là dữ liệu có thể được giữ
+lại lâu (thông thường là 10 năm ở nhiệt độ phòng) và chỉ mất vài nano giây để
+ghi~\cite{galloOverviewPhasechangeMemory2020}.
 
 Mục tiêu của thế hệ PCM đầu tiên là cạnh tranh với DRAM: độ trễ đọc và ghi, độ
 bền qua các chu kỳ ghi (cyclic write), retention, v.v. Một vài báo cáo đã cho
@@ -122,6 +131,38 @@ NAND Flash và DRAM vẫn tiếp tục phát triển nhanh chóng.
 Tuy nhiên, với nhu cầu của memory-centric computing và storage-class memory
 (SCM), PCM có thể được dùng để lấp khoảng trống giữa NAND Flash và DRAM. Điều
 này có nghĩa là SCM phải đồng thời rẻ hơn DRAM và nhanh hơn NAND Flash. Để trở
-thành SCM, tốc độ đọc và giá thành của PCM phải tiếp tục được cải thiện nhiều
-hơn nữa.
+thành SCM, tốc độ đọc dữ liệu và giá thành của PCM phải tiếp tục được cải thiện
+nhiều hơn nữa~\cite{kimEvolutionPhaseChangeMemory2020}.
+
+Công nghệ Cross-point (X-point) được sinh ra để giải quyết các vấn đề trên.
+X-point có mật độ cao ($4F^2$) và khả năng chồng lớp 3-D giúp giảm giá thành và
+có độ trễ ghi thấp. Intel Optane là bộ nhớ nằm vào phân khúc giữa volatile DRAM
+và các thiết bị lưu trữ dữ liệu (chẳng hạn như NAND Flash). Vì Optane có kiến
+trúc tổ chức dưới dạng byte (byte-addressable) nên Optane có thể vừa đóng vai
+trò là RAM vừa có thể được dùng như các thiết bị lưu trữ dữ liệu như SSD. Intel
+Optane DC Persistent Memory Module (hay Optane DC PMM) là bộ nhớ NVDIMM thương
+mại đầu tiên. So với các thiết bị lưu trữ PCIe, Optane DC PMM có hiệu năng cao
+hơn và hỗ trợ byte-addressable interface. So với DRAM, Optane có mật độ và độ
+bền cao hơn, sử dụng ít điện năng hơn khi idle vì không cần phải làm tươi
+(refresh for data retention) như
+DRAM~\cite{izraelevitzBasicPerformanceMeasurements2019}.
+
+Ngoài các mục đích lưu trữ thông thường, PCM còn có thể hoạt động ở các kiến
+trúc non-von Neumann. Ở mô hình điện toán này, các bộ nhớ không chỉ có thể lưu
+dữ liệu mà còn có thể thực hiện các tác vụ tính toán. Nhờ vậy, ta không cần
+phải chuyển dữ liệu qua lại giữa CPU và RAM, tránh được nút thắt cổ chai trong
+hiệu năng của kiến trúc von Neumann~\cite{galloOverviewPhasechangeMemory2020}.
+
+\subsection{Spin-transfer torque magnetic random access memory (STT-MRAM)}
+Spin-transfer torque magnetic random access memory (STT-MRAM) là công nghệ bộ
+nhớ từ được phát triển dựa trên MRAM (magnetoresistive random access memory,
+hay ``bộ nhớ RAM từ điện trở'') với mục tiêu làm tăng khả năng mở rộng
+(scalability) của bộ nhớ non-volatile ở các máy điện toán tiên tiến. Các công
+nghệ bộ nhớ bán dẫn (semiconductor memory) hiện nay thường sử dụng điện tích
+electron (electron charge) mà không chú ý tới một đặc tính khác của electron:
+spin cơ học lượng tử (quantum-mechanical spin). Để trở thành một lựa chọn mới
+cho bộ nhớ bán dẫn, STT-MRAM phải có mật độ cao ($\sim10F^2$), tốc độ (dưới
+10ns cho tác vụ đọc và ghi) và sử dụng ít điện
+năng~\cite{apalkovSpintransferTorqueMagnetic2013}.
+
 

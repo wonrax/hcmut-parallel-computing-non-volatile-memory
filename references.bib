@@ -1,4 +1,21 @@
 
+@article{apalkovSpintransferTorqueMagnetic2013,
+  title = {Spin-Transfer Torque Magnetic Random Access Memory ({{STT-MRAM}})},
+  author = {Apalkov, Dmytro and Khvalkovskiy, Alexey and Watts, Steven and Nikitin, Vladimir and Tang, Xueti and Lottis, Daniel and Moon, Kiseok and Luo, Xiao and Chen, Eugene and Ong, Adrian and {Driskill-Smith}, Alexander and Krounbi, Mohamad},
+  year = {2013},
+  month = may,
+  journal = {ACM Journal on Emerging Technologies in Computing Systems},
+  volume = {9},
+  number = {2},
+  pages = {13:1--13:35},
+  issn = {1550-4832},
+  doi = {10.1145/2463585.2463589},
+  url = {https://doi.org/10.1145/2463585.2463589},
+  urldate = {2022-01-18},
+  abstract = {Spin-transfer torque magnetic random access memory (STT-MRAM) is a novel, magnetic memory technology that leverages the base platform established by an existing 100+nm node memory product called MRAM to enable a scalable nonvolatile memory solution for advanced process nodes. STT-MRAM features fast read and write times, small cell sizes of 6F2 and potentially even smaller, and compatibility with existing DRAM and SRAM architecture with relatively small associated cost added. STT-MRAM is essentially a magnetic multilayer resistive element cell that is fabricated as an additional metal layer on top of conventional CMOS access transistors. In this review we give an overview of the existing STT-MRAM technologies currently in research and development across the world, as well as some specific discussion of results obtained at Grandis and with our foundry partners. We will show that in-plane STT-MRAM technology, particularly the DMTJ design, is a mature technology that meets all conventional requirements for an STT-MRAM cell to be a nonvolatile solution matching DRAM and/or SRAM drive circuitry. Exciting recent developments in perpendicular STT-MRAM also indicate that this type of STT-MRAM technology may reach maturity faster than expected, allowing even smaller cell size and product introduction at smaller nodes.},
+  keywords = {magnetic memory,magnetic tunneling junction,MRAM,spin polarization,spin transfer torque,tunneling magnetoresistance}
+}
+
 @inproceedings{arulrajLetTalkStorage2015,
   title = {Let's {{Talk About Storage}} \& {{Recovery Methods}} for {{Non-Volatile Memory Database Systems}}},
   booktitle = {Proceedings of the 2015 {{ACM SIGMOD International Conference}} on {{Management}} of {{Data}}},
@@ -161,6 +178,25 @@
   isbn = {978-1-4503-5114-0}
 }
 
+@incollection{hanyuSpintransfertorqueMagnetoresistiveRandomaccess2019,
+  title = {Spin-Transfer-Torque Magnetoresistive Random-Access Memory ({{STT-MRAM}}) Technology},
+  booktitle = {Advances in {{Non-Volatile Memory}} and {{Storage Technology}} ({{Second Edition}})},
+  author = {Hanyu, T. and Endoh, T. and Ando, Y. and Ikeda, S. and Fukami, S. and Sato, H. and Koike, H. and Ma, Y. and Suzuki, D. and Ohno, H.},
+  editor = {{Magyari-Köpe}, Blanka and Nishi, Yoshio},
+  year = {2019},
+  month = jan,
+  series = {Woodhead {{Publishing Series}} in {{Electronic}} and {{Optical Materials}}},
+  pages = {237--281},
+  publisher = {{Woodhead Publishing}},
+  doi = {10.1016/B978-0-08-102584-0.00008-5},
+  url = {https://www.sciencedirect.com/science/article/pii/B9780081025840000085},
+  urldate = {2022-01-18},
+  abstract = {This chapter deals with MRAM technology based on spin-transfer torque (STT) and the prospect of new directions in VLSI made possible by the technology. Current materials and device technology using STT is first reviewed with emphasis on magnetic tunnel junction (MTJ) having perpendicular easy axis for magnetization. Then, STT-MRAM realizations based on the MTJ technology are explained; one for high density and the other for high speed, aiming at nonvolatile main memory and high-speed storage and at nonvolatile cache memory, respectively. Finally, nonvolatile MTJ-based logic-in-memory architecture is shown to be capable of realizing both compactness and low power in a number of applications.},
+  isbn = {978-0-08-102584-0},
+  langid = {english},
+  keywords = {Integrated circuits,Magnetic tunnel junction,Magnetoresistive random access memory (MRAM),Spin-transfer torque,Spintronics}
+}
+
 @misc{intelHighPerformanceComputing,
   title = {High {{Performance Computing}} ({{HPC}}) {{Storage}} and {{Memory Solutions}}},
   author = {Intel},
@@ -170,6 +206,37 @@
   abstract = {High performance computing (HPC) storage and memory solutions require high workload bandwidth for large file storage and data accessibility.},
   langid = {english},
   note = {Truy cập lần cuối 2022-01-17}
+}
+
+@article{izraelevitzBasicPerformanceMeasurements2019,
+  title = {Basic {{Performance Measurements}} of the {{Intel Optane DC Persistent Memory Module}}},
+  author = {Izraelevitz, Joseph and Yang, Jian and Zhang, Lu and Kim, Juno and Liu, Xiao and Memaripour, Amirsaman and Soh, Yun Joon and Wang, Zixuan and Xu, Yi and Dulloor, Subramanya R. and Zhao, Jishen and Swanson, Steven},
+  year = {2019},
+  month = aug,
+  journal = {arXiv:1903.05714 [cs]},
+  eprint = {1903.05714},
+  eprinttype = {arxiv},
+  primaryclass = {cs},
+  url = {http://arxiv.org/abs/1903.05714},
+  urldate = {2022-01-18},
+  abstract = {Scalable nonvolatile memory DIMMs will finally be commercially available with the release of the Intel Optane DC Persistent Memory Module (or just "Optane DC PMM"). This new nonvolatile DIMM supports byte-granularity accesses with access times on the order of DRAM, while also providing data storage that survives power outages. This work comprises the first in-depth, scholarly, performance review of Intel's Optane DC PMM, exploring its capabilities as a main memory device, and as persistent, byte-addressable memory exposed to user-space applications. This report details the technologies performance under a number of modes and scenarios, and across a wide variety of macro-scale benchmarks. Optane DC PMMs can be used as large memory devices with a DRAM cache to hide their lower bandwidth and higher latency. When used in this Memory (or cached) mode, Optane DC memory has little impact on applications with small memory footprints. Applications with larger memory footprints may experience some slow-down relative to DRAM, but are now able to keep much more data in memory. When used under a file system, Optane DC PMMs can result in significant performance gains, especially when the file system is optimized to use the load/store interface of the Optane DC PMM and the application uses many small, persistent writes. For instance, using the NOVA-relaxed NVMM file system, we can improve the performance of Kyoto Cabinet by almost 2x. Optane DC PMMs can also enable user-space persistence where the application explicitly controls its writes into persistent Optane DC media. In our experiments, modified applications that used user-space Optane DC persistence generally outperformed their file system counterparts. For instance, the persistent version of RocksDB performed almost 2x faster than the equivalent program utilizing an NVMM-aware file system.},
+  archiveprefix = {arXiv},
+  keywords = {Computer Science - Distributed; Parallel; and Cluster Computing,Computer Science - Performance}
+}
+
+@article{kimEvolutionPhaseChangeMemory2020,
+  title = {Evolution of {{Phase-Change Memory}} for the {{Storage-Class Memory}} and {{Beyond}}},
+  author = {Kim, Taehoon and Lee, Seungyun},
+  year = {2020},
+  month = apr,
+  journal = {IEEE Transactions on Electron Devices},
+  volume = {67},
+  number = {4},
+  pages = {1394--1406},
+  issn = {1557-9646},
+  doi = {10.1109/TED.2020.2964640},
+  abstract = {In this article, the development history and the technical hurdles of phase-change memory (PCM) are reviewed and recent progress and future directions are discussed. Prospects of PCM for storage-class memory (SCM) are discussed in terms of the technical challenges to satisfy the market requirements, mainly for the performance and cost effectiveness. For a more in-depth discussion, PCM is segmented into the memory part, the access device part, and the sensing scheme part. In the memory part, Set (crystallization)-Reset (amorphization) write characteristics and thermal disturbance (TDB) will be reinterpreted in terms of power consumption and performance of SCM. In the access device part, the application history of various devices, such as the transistor, the diode, and the two-terminal selector, will be reviewed and explained based on the process integration issues and area efficiency. In the next part, various sensing schemes used to make a lower read latency, multilevel cell (MLC), and cross point (X-point) are summarized. Thereafter, future directions and possible evolution pathways of 3-D structures, including X-point and vertical X-point (VXP), will be discussed for the first time. Finally, the feasibility of PCM for neuromorphic application will be followed.},
+  keywords = {Cross-point (X-point) memory,Heating systems,History,Metals,neuromorphic device,Performance evaluation,Phase change materials,phase-change memory (PCM),Random access memory,reset current,resistive random access memory,scaling limit,storage-class memory (SCM),synaptic device,thermal disturbance (TDB),Transistors}
 }
 
 @article{leePhaseChangeTechnologyFuture2010,
@@ -387,6 +454,22 @@
   doi = {10.1007/978-90-481-9431-5_1},
   abstract = {In the year 2000, the total semiconductor memory revenues of SRAM, DRAM, 6 NOR Flash and NAND Flash memories amounted \$46 billion. As the decade 7 closed in 2009, total revenues are projected to have declined 8.7\% to \$42 billion. 8 Of the major memory segments, only NAND Flash memory revenues have grown 9 in the past decade at a CAGR of almost 50\% (see Fig. 1.1).},
   isbn = {978-90-481-9430-8}
+}
+
+@article{zhangInMemoryBigData2015,
+  title = {In-{{Memory Big Data Management}} and {{Processing}}: {{A Survey}}},
+  shorttitle = {In-{{Memory Big Data Management}} and {{Processing}}},
+  author = {Zhang, Hao and Chen, Gang and Ooi, Beng Chin and Tan, Kian-Lee and Zhang, Meihui},
+  year = {2015},
+  month = jul,
+  journal = {IEEE Transactions on Knowledge and Data Engineering},
+  volume = {27},
+  number = {7},
+  pages = {1920--1948},
+  issn = {1558-2191},
+  doi = {10.1109/TKDE.2015.2427795},
+  abstract = {Growing main memory capacity has fueled the development of in-memory big data management and processing. By eliminating disk I/O bottleneck, it is now possible to support interactive data analytics. However, in-memory systems are much more sensitive to other sources of overhead that do not matter in traditional I/O-bounded disk-based systems. Some issues such as fault-tolerance and consistency are also more challenging to handle in in-memory environment. We are witnessing a revolution in the design of database systems that exploits main memory as its data storage layer. Many of these researches have focused along several dimensions: modern CPU and memory hierarchy utilization, time/space efficiency, parallelism, and concurrency control. In this survey, we aim to provide a thorough review of a wide range of in-memory data management and processing proposals and systems, including both data storage systems and data processing frameworks. We also give a comprehensive presentation of important technology in memory management, and some key factors that need to be considered in order to achieve efficient in-memory data management and processing.},
+  keywords = {distributed databases,DRAM,Indexes,Memory management,Optimization,Parallel processing,primary memory,Primary memory,query processing,Random access memory,Registers,relational databases}
 }
 
 @inproceedings{zhangMojimReliableHighlyAvailable2015,
