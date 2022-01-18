@@ -45,10 +45,10 @@ nhớ cấp lưu trữ'') được đề xuất để giảm sự khác biệt g
 ``storage-memory''~\cite{gouxOxRAMTechnologyDevelopment2019}.
 
 Để đáp ứng các nhu cầu tính toán hiện nay, các thiết bị bộ nhớ mới được nghiên
-cứu và ra đời. Nổi bật là resistive RAM với spin-transfer torque magnetic RAM
-(STT-MRAM), phase-change RAM (PCRAM) và PRAM hay ReRAM. Báo cáo này sẽ tập
-trung nghiên cứu các công nghệ resistive RAM trên, cùng với NAND Flash là công
-nghệ đang thống trị trên thị trường hiện tại.
+cứu và ra đời. Nổi bật là spin-transfer torque magnetic RAM (STT-MRAM),
+phase-change RAM (PCM), resistive RAM (ReRAM hay RRAM). Báo cáo này sẽ tập
+trung nghiên cứu các công nghệ trên, cùng với NAND Flash là công nghệ đang
+thống trị trên thị trường hiện tại.
 
 \subsection{NAND Flash}
 Bộ nhớ Flash được chế tạo bởi TS. Fujio Masuoka tại Toshiba Corp. vào năm 1984.
@@ -165,4 +165,15 @@ cho bộ nhớ bán dẫn, STT-MRAM phải có mật độ cao ($\sim10F^2$), t�
 10ns cho tác vụ đọc và ghi) và sử dụng ít điện
 năng~\cite{apalkovSpintransferTorqueMagnetic2013}.
 
+Ta có thể sử dụng STT-MRAM để lấp đầy các khoảng trống hiệu năng trong kiến
+trúc von Neumann. Hình~\ref{fig:mram_architect} đề nghị một kiến trúc bộ nhớ
+mới với LL (last level) cache sẽ là STT-MRAM, và hai khoảng trống cũng sẽ được
+lấp bởi công nghệ STT-MRAM. Kiến trúc này có thể giải quyết vấn đề về năng
+lượng bởi vì ta có thể ngắt điện các bộ nhớ cache non-volatile khi chúng đang
+idle. Việc STT-MRAM làm cache cho DRAM cũng là một phương pháp hiệu quả để xóa
+bỏ các nút thắt cổ chai hiệu
+năng~\cite{hanyuSpintransfertorqueMagnetoresistiveRandomaccess2019}.
 
+\image[1]{img/mram_architect.png}{Trái: kiến trúc bộ nhớ thông thường. Phải:
+Kiến trúc bộ nhớ non-volatile sử dụng STT-MRAM (Nguồn: Semiconductor
+Engineering).}{fig:mram_architect}
