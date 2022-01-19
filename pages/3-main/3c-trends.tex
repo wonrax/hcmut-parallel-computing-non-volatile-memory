@@ -1,16 +1,65 @@
 \section{Xu hướng công nghệ non-volatile memory}
 \label{chap:experiments}
 
-Dui faucibus in ornare quam viverra orci sagittis. Amet facilisis magna etiam
-tempor orci eu. Aliquam sem fringilla ut morbi tincidunt augue interdum.
-Dapibus ultrices in iaculis nunc sed augue lacus. Tristique magna sit amet
-purus gravida quis blandit. Gravida in fermentum et sollicitudin ac orci
-phasellus egestas tellus. Faucibus a pellentesque sit amet porttitor eget
-dolor. Viverra tellus in hac habitasse platea dictumst vestibulum rhoncus est.
-Semper quis lectus nulla at volutpat diam. Ipsum consequat nisl vel pretium.
-Eget nulla facilisi etiam dignissim diam quis. Odio aenean sed adipiscing diam
-donec adipiscing tristique. Tortor consequat id porta nibh venenatis cras. In
-est ante in nibh mauris cursus. Sit amet venenatis urna cursus eget nunc
-scelerisque viverra mauris. Pharetra et ultrices neque ornare aenean euismod
-elementum. Congue nisi vitae suscipit tellus mauris a diam maecenas. Arcu dui
-vivamus arcu felis bibendum ut tristique et.
+Kosuke Suzuki~\cite{suzukiSurveyTrendsNonVolatile2015a} đã thực hiện khảo sát
+các công nghệ non-volatile từ năm 2000 - 2015. Kết quả đạt được là dữ liệu cho
+thấy một bức tranh rõ ràng vẽ lên quá trình phát triển của NAND Flash, PCM,
+STT-MRAM và ReRAM. Bài báo so sánh các bộ nhớ non-volatile dựa trên hai tiêu
+chí:
+
+\begin{itemize}
+    \item \textbf{Thông số kỹ thuật}: So sánh các thông số kỹ thuật của các bộ
+    nhớ, chẳng hạn như kích thước cell, tốc độ đọc/ghi của cell, v.v.
+
+    \item \textbf{Thông số kiến trúc}: So sánh hiệu năng của các bộ nhớ đạt
+    được ở trong các hệ thống, bao gồm băng thông đọc/ghi và độ trễ truy cập
+    tổng quát (overall access latency).
+\end{itemize}
+
+\textsc{Cell size} \hspace{0.5cm} Cell size (kích thước cell) là kích thước vật
+lý của một cell. Tuy nhiên với cùng cell size, mật độ bit có thể cao hơn nhờ
+công nghệ multi-level cell (một cell có thể chứa nhiều hơn một bit) và 3-D
+stacking (chồng lớp 3-D). Hình~\ref{fig:survey_cell_size} thể hiện cell size
+của từng bộ nhớ non-volatile. PRAM đã giảm xuống còn $4F^2$. ReRAM sử dụng
+nhiều kỹ thuật khác nhau để thay đổi điện trở của cell (cell resistance) nên
+không thể hiện xu hướng rõ rệt. Tương tự, STT-MRAM cũng có các thiết kế cell
+khác nhau. Kích thước cell của NAND vẫn nằm ở quanh $4F^2$ kể từ năm 2000.
+
+\image[1]{img/survey_cell_size.png}{Cell size.}{fig:survey_cell_size}
+
+\textsc{Average cell size} \hspace{0.5cm} Average cell size (kích thước cell
+trung bình) tương tự như cell size, nhưng bao gồm cả kích thước mạch ngoại vi
+(peripheral circuit) (hình~\ref{fig:survey_average_cell_size}).
+
+\image[1]{img/survey_average_cell_size.png}{Average cell
+size.}{fig:survey_average_cell_size}
+
+\textsc{Average bit density} \hspace{0.5cm} Average bit density (mật độ bit
+trung bình) được tính bằng dung lượng (Gbit) chia cho kích thước die ($cm^2$).
+Hình~\ref{fig:survey_average_bit_density} thể hiện mật độ bit của từng bộ nhớ.
+Mật độ bit của PRAM tăng gấp đôi mỗi 1,66 năm và đã đạt 13,5 Gbit/cm2 (2015).
+NAND Flash tăng gấp đôi mỗi 1,91 năm và cao nhất là 185,8 Gbit/cm2 (2015).
+ReRAM có mật độ bit cao hơn PRAM, và STT-MRAM có mật độ cao nhất là 0.36
+Gbit/cm2 (2015).
+
+\image[1]{img/survey_average_bit_density.png}{Average bit
+density.}{fig:survey_average_bit_density}
+
+\textsc{Read/write time} \hspace{0.5cm} Thời gian đọc và ghi
+(hình~\ref{fig:survey_read_time} và~\ref{fig:survey_write_time}) là thời gian
+cần thiết để đọc từ một cell nhưng không bao gồm độ trễ của mạch ngoại vi. Thời
+gian đọc tăng đồng thời theo mật độ bit ở tất cả các bộ nhớ trừ STT-MRAM.
+
+\image[1]{img/survey_read_time.png}{Read time.}{fig:survey_read_time}
+\image[1]{img/survey_write_time.png}{Write time.}{fig:survey_write_time}
+
+\textsc{Sequential read/write bandwidth} \hspace{0.5cm} Băng thông đọc/ghi tuần
+tự được tính với giả thiết kiến trúc DRAM dựa trên DIMM (DRAM-like DIMM-base
+architecture) (hình~\ref{fig:survey_sequential_read_bw}
+và~\ref{fig:survey_sequential_write_bw}). Truy cập tuần tự (sequential access
+có thể cạnh tranh với DRAM).
+
+\image[1]{img/survey_sequential_read_bw.png}{Sequential read
+bandwidth.}{fig:survey_sequential_read_bw}
+\image[1]{img/survey_sequential_write_bw.png}{Sequential write
+bandwidth.}{fig:survey_sequential_write_bw}
