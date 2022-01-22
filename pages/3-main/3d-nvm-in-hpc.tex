@@ -20,15 +20,16 @@
 Trong thập kỷ qua, số lượng CPU core trên mỗi node không ngừng tăng, có thể từ
 vài core cho đến hàng trăm core. Trong khi đó, lượng bộ nhớ RAM cho mỗi core hầu
 như không thay đổi. Thông thường, để tăng dung lượng bộ nhớ RAM, ta sẽ phải đầu
-tư thêm DRAM với giá thành đắt đỏ. Điều này khiến DRAM chiếm 80-90\% chi phí của
-toàn hệ thống với DRAM pool lớn~\cite{mironovPerformanceEvaluationIntel2019}.
+tư thêm DRAM với giá thành đắt đỏ. Điều này khiến DRAM chiếm tới 80-90\% chi phí
+đầu tư của toàn hệ thống có DRAM pool
+lớn~\cite{mironovPerformanceEvaluationIntel2019}.
 
 Đặc điểm của các ứng dụng HPC (high performance computing) là có lượng dữ liệu
 khổng lồ và phải thực hiện nhiều tính toán trên tập dữ liệu đó. Với sự phát
 triển của công nghệ non-volatile memory như phase change memory hay STT-MRAM,
 hiệu năng của các thiết bị này vượt trội so với ổ cứng và có thể tiến lên cạnh
-tranh với DRAM. Tính bất khả biến và hiệu năng của NVM làm các thiết bị lữu trữ
-và bộ nhớ (RAM) gần nhau hơn bao giờ hết. NVM có hai mô hình sử
+tranh với DRAM. Tính bất khả biến và hiệu năng cao của NVM làm các thiết bị lưu
+trữ và bộ nhớ RAM gần nhau hơn bao giờ hết. NVM có hai mô hình sử
 dụng~\cite{liuPerformanceEvaluationModeling2017}:
 
 \begin{itemize}
@@ -58,8 +59,8 @@ Bahn et al.~\cite{bahnImplicationsNVMBased2020} đã tiến hành thử nghiệm
 hưởng của NVM với vai trò là thiết bị lưu trữ dữ liệu (storage device) sử dụng
 PCM và STT-MRAM. Hình~\ref{fig:storage_read} và~\ref{fig:storage_write} so sánh
 hiệu năng của HDD, RAMDisk (mô phỏng STT-MRAM) và PCMdisk (mô phỏng PCM) khi
-chạy IOzone (file system benchmark utility) với nhiều kích thước bộ nhớ RAM
-khác nhau. Khi bộ nhớ lớn hơn 1GB, HDD đạt hiệu năng rất cao tại vì tất cả dữ
+chạy IOzone (file system benchmark utility) với nhiều kích thước bộ nhớ RAM khác
+nhau. Khi bộ nhớ RAM lớn hơn 1GB, HDD đạt hiệu năng rất cao tại vì tất cả dữ
 liệu đã có thể nằm gọn trong buffer cache. Tuy nhiên, với bộ nhớ nhỏ hơn 1GB,
 hiệu năng của NVM lớn hơn HDD khá nhiều.
 
@@ -72,7 +73,7 @@ thước bộ nhớ RAM hiện tại khó có thể được mở rộng trong k
 data không ngừng phát triển. Hệ thống tính toán trong tương lai có thể bao gồm
 bộ nhớ RAM có dung lượng nhỏ nhưng được hỗ trợ bởi thiết bị lưu trữ NVM để đảm
 bảo hiệu năng. Kiến trúc ``small memory, fast storage'' có thể rất hiệu quả
-trong các chương trình tiêu tốn bộ nhớ như big data hoặc nghiên cứu khoa
+trong các chương trình tiêu tốn bộ nhớ như big data hoặc các nghiên cứu khoa
 học~\cite{bahnImplicationsNVMBased2020}.
 
 Liu et al.~\cite{liuPerformanceEvaluationModeling2017} đã thử nghiệm POSIX và
@@ -83,11 +84,32 @@ cache hơn HDD và SSD. Do đó, ta có thể cắt giảm tiêu thụ bộ nh�
 
 Với sự ra đời của các thiết bị Intel Optane, các nhà nghiên cứu đã có thể thực
 hiện so sánh hiệu năng của NVM sử dụng thiết bị thật mà không cần phải mô phỏng
-(emulate). Shanbhag et al.~\cite{shanbhagLargescaleInmemoryAnalytics2020} đã
-thực hiện đo lường hiệu năng của mô hình hỗn hợp (hybrid) Intel Optane DC PMM
-(App Direct Mode) và DRAM với Star Schema Benchmark (benchmark hiệu năng của
-database trong ứng dụng data warehouse). Kết quả cho thấy, mô hình sử dụng NVM +
-DRAM có tốc độ chậm hơn 1,6 lần so với hệ thống chỉ sử dụng DRAM, tuy nhiên cho
-phép dung lượng lưu trữ gấp 10 lần.
+(emulate). Thực nghiệm của Izraelevitz et
+al.~\cite{izraelevitzBasicPerformanceMeasurements2019} cho thấy khi sử dụng
+Optane DC PMM với hệ thống NVMM-aware, hiệu năng có thể được tăng lên đáng kể.
 
 \subsection{Mô hình memory-based}
+Các hệ thống lưu trữ hiện tại đã không còn đáp ứng được các nhu cầu về thời gian
+do độ trễ quá lớn của ổ cứng. Các công ty lớn như Google, Facebook và Twitter là
+một trong những người vấp phải vấn đề này đầu tiên. Tuy nhiên với tình hình hiện
+tại, kể cả các công ty vừa và nhỏ có thể gặp trở ngại với hiệu năng của hệ thống
+lưu trữ truyền thống. Để đạt được tốc độ "real-time" trong việc truy vấn và xử
+lý dữ liệu, ta phải cần đến một hệ thống hay một databse \textit{in-memory}, tức
+là có thể giữ được toàn bộ dữ liệu trong RAM.
+
+Với sự phát triển của NVM, NVRAM có thể được lắp đặt cùng vai trò với DRAM ở
+memory bus. Lúc này, địa chỉ bộ nhớ (memory address) có thể được chia thành địa
+chỉ volatile và địa chỉ non-volatile.
+
+Shanbhag et al.~\cite{shanbhagLargescaleInmemoryAnalytics2020} đã
+thực hiện đo lường hiệu năng của mô hình hỗn hợp (hybrid) Intel Optane DC PMM
+(App Direct Mode) và DRAM với Star Schema Benchmark (benchmark hiệu năng của
+database trong ứng dụng data warehouse). Kết quả cho thấy, mô hình sử dụng NVM
+kết hợp DRAM có tốc độ chỉ chậm hơn 1,6 lần so với hệ thống chỉ sử dụng DRAM,
+tuy nhiên cho phép tăng dung lượng lưu trữ hơn gấp 10 lần.
+
+Thực nghiệm của Izraelevitz et
+al.~\cite{izraelevitzBasicPerformanceMeasurements2019} nhận định rằng, khi sử
+dụng Optane DC PMM với cached mode trong các ứng dụng thực tế, NVM có thể đạt
+được hiệu năng hoàn toàn so sánh được với DRAM. Mặt khác, với NVM ta có thể tăng
+dung lượng bộ nhớ RAM lên nhiều lần.

@@ -139,12 +139,12 @@ X-point có mật độ cao ($4F^2$) và khả năng chồng lớp 3-D giúp gi�
 có độ trễ ghi thấp. Intel Optane là bộ nhớ nằm vào phân khúc giữa volatile DRAM
 và các thiết bị lưu trữ dữ liệu (chẳng hạn như NAND Flash). Vì Optane có kiến
 trúc tổ chức dưới dạng byte (byte-addressable) nên Optane có thể vừa đóng vai
-trò là RAM vừa có thể được dùng như các thiết bị lưu trữ dữ liệu như SSD. Intel
-Optane DC Persistent Memory Module (hay Optane DC PMM) là bộ nhớ NVDIMM thương
-mại đầu tiên. So với các thiết bị lưu trữ PCIe, Optane DC PMM có hiệu năng cao
-hơn và hỗ trợ byte-addressable interface. So với DRAM, Optane có mật độ và độ
-bền cao hơn, sử dụng ít điện năng hơn khi idle vì không cần phải làm tươi
-(refresh for data retention) như
+trò là RAM (Memory mode) vừa có thể được dùng như các thiết bị lưu trữ dữ liệu
+như SSD (App Direct mode). Intel Optane DC Persistent Memory Module (hay Optane
+DC PMM) là bộ nhớ NVDIMM thương mại đầu tiên. So với các thiết bị lưu trữ PCIe,
+Optane DC PMM có hiệu năng cao hơn và hỗ trợ byte-addressable interface. So với
+DRAM, Optane có mật độ và độ bền cao hơn, sử dụng ít điện năng hơn khi idle vì
+không cần phải làm tươi (refresh for data retention) như
 DRAM~\cite{izraelevitzBasicPerformanceMeasurements2019}.
 
 Ngoài các mục đích lưu trữ thông thường, PCM còn có thể hoạt động ở các kiến
@@ -177,3 +177,27 @@ năng~\cite{hanyuSpintransfertorqueMagnetoresistiveRandomaccess2019}.
 \image[1]{img/mram_architect.png}{Trái: kiến trúc bộ nhớ thông thường. Phải:
 Kiến trúc bộ nhớ non-volatile sử dụng STT-MRAM (Nguồn: Semiconductor
 Engineering).}{fig:mram_architect}
+
+Bảng~\ref{table:nvm_overall} so sánh tổng quan công nghệ non-volatile memory với
+DRAM và NAND Flash trong năm 2020.
+
+\begin{table}[ht!]
+\resizebox{\textwidth}{!}{
+\centering
+\begin{tabular}{lllll}
+\hline
+                        & DRAM      & STT-MRAM              & PCM         & NAND Flash  \\ \hline
+Trạng thái              & Product   & Prototype             & Product     & Product     \\
+Độ trễ đọc              & 10 ns     & 10 ns                 & 20-50 ns    & 25 us       \\
+Độ trễ ghi              & 10 ns     & 10 ns                 & 80-500 ns   & 200 us      \\
+Năng lượng bit (r/w)    & 2 pJ      & 0.02 pJ               & 20pJ/100 pJ & 10 nJ       \\
+Cần nguồn điện          & Có        & Không                 & Không       & Không       \\
+Độ bền (số lần ghi/bit) & $10^16$   & $10^16$               & $10^6–10^8$ & $10^5$      \\
+Kích thước cell         & 6–8 $F^2$ & \textgreater{}6 $F^2$ & 5-10 $F^2$  & 4-5 $F^2$   \\
+Multi-level cell        &           & 4 bits/cell           & 4 bits/cell & 4 bits/cell \\ \hline
+\end{tabular}
+}
+\caption{So sánh đặc điểm của các công nghệ non-volatile memory với DRAM và NAND
+Flash NAND Flash~\cite{bahnImplicationsNVMBased2020}.}
+\label{table:nvm_overall}
+\end{table}
