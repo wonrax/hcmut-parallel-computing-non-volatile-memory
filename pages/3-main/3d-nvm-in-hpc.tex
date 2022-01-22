@@ -113,3 +113,13 @@ al.~\cite{izraelevitzBasicPerformanceMeasurements2019} nhận định rằng, kh
 dụng Optane DC PMM với cached mode trong các ứng dụng thực tế, NVM có thể đạt
 được hiệu năng hoàn toàn so sánh được với DRAM. Mặt khác, với NVM ta có thể tăng
 dung lượng bộ nhớ RAM lên nhiều lần.
+
+Ngoài khả năng mở rộng bộ nhớ, tính non-volatile của NVM còn có thể được khai
+thác để bảo toàn dữ liệu trong RAM. Sự cố phần cứng thường dẫn đến sự cố phần
+mềm và có thể làm crash ứng dụng, làm mất dữ liệu đang được tính toán và ảnh
+hưởng tới hiệu năng hệ thống. Một hệ thống HPC thông thường có MTBF (mean time
+between failure) rơi vào khoảng 10 - 100 giờ. MTBF sẽ giảm nếu độ phức tạp của
+hệ thống càng cao. EasyCrash~\cite{renExploringNonVolatilityNonVolatile2020} là
+một framework tận dụng NVM để đảm bảo cho tính toàn vẹn của dữ liệu khi hệ thống
+gặp sự cố. EasyCrash sẽ sử dụng các dữ liệu còn sót lại trong NVM để khởi động
+lại ứng dụng dựa trên các đặc tính của hệ thống HPC.
