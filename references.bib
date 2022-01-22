@@ -306,6 +306,18 @@
   isbn = {978-0-08-102585-7}
 }
 
+@inproceedings{mironovPerformanceEvaluationIntel2019,
+  title = {Performance {{Evaluation}} of the {{Intel Optane DC Memory With Scientific Benchmarks}}},
+  booktitle = {2019 {{IEEE}}/{{ACM Workshop}} on {{Memory Centric High Performance Computing}} ({{MCHPC}})},
+  author = {Mironov, Vladimir and Chernykh, Igor and Kulikov, Igor and Moskovsky, Alexander and Epifanovsky, Evgeny and Kudryavtsev, Andrey},
+  year = {2019},
+  month = nov,
+  pages = {1--6},
+  doi = {10.1109/MCHPC49590.2019.00008},
+  abstract = {Intel Optane technology is a cost-effective solution to create large non-volatile memory pools, which is attractive to many scientific applications. Last year Intel® OptaneTM DC Persistent Memory in DIMM (PMM) form-factor was introduced, which is capable of being used as main memory device. This technology promises faster memory access comparing to Intel® OptaneTM DC P4800X SSD with Intel® Memory Drive Technology devices available previously. In this paper, we present new benchmark data for the Intel Optane DC Persistent Memory. We studied the performance of scientific application from domains of quantum chemistry and computational astrophysics. To put performance of the Intel Optane DC PMM in comparison, we used two memory configurations: DDR4 only system and Optane DC SSD with Intel Memory Drive Technology (IMDT) that is another option for memory extension. We see that PMM is superior to IMDT in almost all our benchmarks, to no surprise. However, PMM was 20-30\% more performant in quantum chemistry and only marginally better for astrophysics simulations. We also found, that for practical calculations hybrid setup demonstrates on the same order of magnitude performance as DDR4 system.},
+  keywords = {Astrophysics,Benchmark testing,benchmarks,Intel Optane DC,Memory management,Non-volatile memory,Nonvolatile memory,Performance evaluation,Quantum chemistry,Runtime}
+}
+
 @article{monziocompagnoniReviewingEvolutionNAND2017,
   title = {Reviewing the {{Evolution}} of the {{NAND Flash Technology}}},
   author = {Monzio Compagnoni, Christian and Goda, Akira and Spinelli, Alessandro S. and Feeley, Peter and Lacaita, Andrea L. and Visconti, Angelo},
@@ -347,6 +359,23 @@
   doi = {10.1109/JPROC.2008.2004319},
   abstract = {This papers reviews the increasing role of NAND flash memory in storage architectures. NAND flash has enjoyed a phenomenal growth rate in storage capacities as well as a steady decline in pricing during the past few years. These developments have enabled NAND to enter and possibly change or displace some traditional storage architectures. However, besides cost, NAND flash memory has some reliability and performance issues that will slow its adoption into all storage architectures. This paper will analyze the advantages and disadvantages of this technology and the implications to the current and possible future storage architectures. Moreover, we will analyze NAND flash future density and costs trends and compare them with the traditional hard disk drive.},
   keywords = {Computer architecture,Costs,Digital cameras,Disk drives,EPROM,hard disks,Hard disks,Memory architecture,memory architectures,Random access memory,Read-write memory,semiconductor memories,Semiconductor memory,Silicon}
+}
+
+@inproceedings{shanbhagLargescaleInmemoryAnalytics2020,
+  title = {Large-Scale in-Memory Analytics on {{Intel}}® {{Optane}}™ {{DC}} Persistent Memory},
+  booktitle = {Proceedings of the 16th {{International Workshop}} on {{Data Management}} on {{New Hardware}}},
+  author = {Shanbhag, Anil and Tatbul, Nesime and Cohen, David and Madden, Samuel},
+  year = {2020},
+  month = jun,
+  series = {{{DaMoN}} '20},
+  pages = {1--8},
+  publisher = {{Association for Computing Machinery}},
+  address = {{New York, NY, USA}},
+  doi = {10.1145/3399666.3399933},
+  url = {https://doi.org/10.1145/3399666.3399933},
+  urldate = {2022-01-21},
+  abstract = {New data storage technologies such as the recently introduced Intel® Optane™ DC Persistent Memory Module (PMM) offer exciting opportunities for optimizing the query processing performance of database workloads. In particular, the unique combination of low latency, byte-addressability, persistence, and large capacity make persistent memory (PMem) an attractive alternative along with DRAM and SSDs. Exploring the performance characteristics of this new medium is the first critical step in understanding how it will impact the design and performance of database systems. In this paper, we present one of the first experimental studies on characterizing Intel® Optane™ DC PMM's performance behavior in the context of analytical database workloads. First, we analyze basic access patterns common in such workloads, such as sequential, selective, and random reads as well as the complete Star Schema Benchmark, comparing standalone DRAM- and PMem-based implementations. Then we extend our analysis to join algorithms over larger datasets, which require using DRAM and PMem in a hybrid fashion while paying special attention to the read-write asymmetry of PMem. Our study reveals interesting performance tradeoffs that can help guide the design of next-generation OLAP systems in presence of persistent memory in the storage hierarchy.},
+  isbn = {978-1-4503-8024-9}
 }
 
 @article{srinivasanStudyChallengesProspects2013,

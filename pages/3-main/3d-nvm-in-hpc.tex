@@ -17,6 +17,12 @@
 % and costly system calls), block-granularity access and high
 % economic cost, etc. (Zhang)
 
+Trong thập kỷ qua, số lượng CPU core trên mỗi node không ngừng tăng, có thể từ
+vài core cho đến hàng trăm core. Trong khi đó, lượng bộ nhớ RAM cho mỗi core hầu
+như không thay đổi. Thông thường, để tăng dung lượng bộ nhớ RAM, ta sẽ phải đầu
+tư thêm DRAM với giá thành đắt đỏ. Điều này khiến DRAM chiếm 80-90\% chi phí của
+toàn hệ thống với DRAM pool lớn~\cite{mironovPerformanceEvaluationIntel2019}.
+
 Đặc điểm của các ứng dụng HPC (high performance computing) là có lượng dữ liệu
 khổng lồ và phải thực hiện nhiều tính toán trên tập dữ liệu đó. Với sự phát
 triển của công nghệ non-volatile memory như phase change memory hay STT-MRAM,
@@ -46,11 +52,13 @@ dụng~\cite{liuPerformanceEvaluationModeling2017}:
 
 \subsection{Mô hình storage-based}
 
-Hyokyung Bahn~\cite{bahnImplicationsNVMBased2020} đã tiến hành thử nghiệm ảnh
+
+
+Bahn et al.~\cite{bahnImplicationsNVMBased2020} đã tiến hành thử nghiệm ảnh
 hưởng của NVM với vai trò là thiết bị lưu trữ dữ liệu (storage device) sử dụng
 PCM và STT-MRAM. Hình~\ref{fig:storage_read} và~\ref{fig:storage_write} so sánh
 hiệu năng của HDD, RAMDisk (mô phỏng STT-MRAM) và PCMdisk (mô phỏng PCM) khi
-chạy IOzone (file system benchmark utility) với nhiều kích thước bộ nhớ (RAM)
+chạy IOzone (file system benchmark utility) với nhiều kích thước bộ nhớ RAM
 khác nhau. Khi bộ nhớ lớn hơn 1GB, HDD đạt hiệu năng rất cao tại vì tất cả dữ
 liệu đã có thể nằm gọn trong buffer cache. Tuy nhiên, với bộ nhớ nhỏ hơn 1GB,
 hiệu năng của NVM lớn hơn HDD khá nhiều.
@@ -60,10 +68,26 @@ hiệu năng của NVM lớn hơn HDD khá nhiều.
 \doubleimage[1]{img/storage_seq_write.png}{Sequential write}{img/storage_rand_write.png}{Random write}{So sánh tốc độ ghi tuần tự và ngẫu nhiên.}{fig:storage_write}
 
 Điều này mang ý nghĩa to lớn đối với việc sử dụng NVM trong tương lai. Kích
-thước bộ nhớ RAM hiện tại khó có thể được mở rộng hơn nữa trong khi dữ liệu big
+thước bộ nhớ RAM hiện tại khó có thể được mở rộng trong khi lượng dữ liệu big
 data không ngừng phát triển. Hệ thống tính toán trong tương lai có thể bao gồm
 bộ nhớ RAM có dung lượng nhỏ nhưng được hỗ trợ bởi thiết bị lưu trữ NVM để đảm
 bảo hiệu năng. Kiến trúc ``small memory, fast storage'' có thể rất hiệu quả
 trong các chương trình tiêu tốn bộ nhớ như big data hoặc nghiên cứu khoa
 học~\cite{bahnImplicationsNVMBased2020}.
 
+Liu et al.~\cite{liuPerformanceEvaluationModeling2017} đã thử nghiệm POSIX và
+MPI I/O với HDD, SSD và PMBD (Persistent Memory Block Driver, là driver mô phỏng
+NVM sử dụng DRAM). Kết quả cho thấy, NVM ít bị ảnh hưởng bởi kích thước page
+cache hơn HDD và SSD. Do đó, ta có thể cắt giảm tiêu thụ bộ nhớ của page cache
+để giảm bớt chi phí.
+
+Với sự ra đời của các thiết bị Intel Optane, các nhà nghiên cứu đã có thể thực
+hiện so sánh hiệu năng của NVM sử dụng thiết bị thật mà không cần phải mô phỏng
+(emulate). Shanbhag et al.~\cite{shanbhagLargescaleInmemoryAnalytics2020} đã
+thực hiện đo lường hiệu năng của mô hình hỗn hợp (hybrid) Intel Optane DC PMM
+(App Direct Mode) và DRAM với Star Schema Benchmark (benchmark hiệu năng của
+database trong ứng dụng data warehouse). Kết quả cho thấy, mô hình sử dụng NVM +
+DRAM có tốc độ chậm hơn 1,6 lần so với hệ thống chỉ sử dụng DRAM, tuy nhiên cho
+phép dung lượng lưu trữ gấp 10 lần.
+
+\subsection{Mô hình memory-based}
