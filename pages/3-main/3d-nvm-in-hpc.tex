@@ -91,11 +91,11 @@ Optane DC PMM với hệ thống NVMM-aware, hiệu năng có thể được tă
 \subsection{Mô hình memory-based}
 Các hệ thống lưu trữ hiện tại đã không còn đáp ứng được các nhu cầu về thời gian
 do độ trễ quá lớn của ổ cứng. Các công ty lớn như Google, Facebook và Twitter là
-một trong những người vấp phải vấn đề này đầu tiên. Tuy nhiên với tình hình hiện
-tại, kể cả các công ty vừa và nhỏ có thể gặp trở ngại với hiệu năng của hệ thống
-lưu trữ truyền thống. Để đạt được tốc độ "real-time" trong việc truy vấn và xử
-lý dữ liệu, ta phải cần đến một hệ thống hay một databse \textit{in-memory}, tức
-là có thể giữ được toàn bộ dữ liệu trong RAM.
+một trong những người vấp phải vấn đề này đầu tiên. Tuy nhiên, hiện nay, kể cả
+các công ty vừa và nhỏ có thể gặp trở ngại với hiệu năng của hệ thống lưu trữ
+truyền thống. Để đạt được tốc độ "real-time" trong việc truy vấn và xử lý dữ
+liệu, ta phải cần đến một hệ thống hay một database \textit{in-memory}, tức là
+có thể giữ được toàn bộ dữ liệu trong RAM.
 
 Với sự phát triển của NVM, NVRAM có thể được lắp đặt cùng vai trò với DRAM ở
 memory bus. Lúc này, địa chỉ bộ nhớ (memory address) có thể được chia thành địa
@@ -111,8 +111,8 @@ tuy nhiên cho phép tăng dung lượng lưu trữ hơn gấp 10 lần.
 Thực nghiệm của Izraelevitz et
 al.~\cite{izraelevitzBasicPerformanceMeasurements2019} nhận định rằng, khi sử
 dụng Optane DC PMM với cached mode trong các ứng dụng thực tế, NVM có thể đạt
-được hiệu năng hoàn toàn so sánh được với DRAM. Mặt khác, với NVM ta có thể tăng
-dung lượng bộ nhớ RAM lên nhiều lần.
+được hiệu năng hoàn toàn so sánh được với DRAM. Mặt khác, NVM giúp tăng khả năng
+của dung lượng bộ nhớ RAM lên nhiều lần.
 
 Ngoài khả năng mở rộng bộ nhớ, tính non-volatile của NVM còn có thể được khai
 thác để bảo toàn dữ liệu trong RAM. Sự cố phần cứng thường dẫn đến sự cố phần

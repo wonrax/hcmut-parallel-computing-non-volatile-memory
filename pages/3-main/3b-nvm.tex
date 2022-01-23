@@ -14,11 +14,11 @@ Trong các hệ thống tính toán ngày nay, bộ nhớ được chia thành h
     \item \textbf{Volatile memory (bộ nhớ khả biến)}: là loại bộ nhớ cần điện
     năng để duy trì trạng thái các dữ liệu trong bộ nhớ. Đa số các bộ nhớ khả
     biến từ chất bán dẫn rơi vào hai loại: Static RAM (SRAM) hoặc dynamic RAM
-    (DRAM). Đối với SRAM, ta chỉ cần duy trì nguồn điện thì dữ liệu sẽ được lưu
-    giữ trong bộ nhớ, tuy nhiên SRAM cần sử dụng sáu bán dẫn (transistor) cho
-    mỗi bit. Mặt khác, DRAM chỉ cần một bán dẫn cho mỗi bit, qua đó cho phép bộ
-    nhớ có mật độ bit cao hơn. Tuy nhiên, DRAM cần các chu trình làm tươi
-    (refresh cycle) thường xuyên để lưu giữ dữ liệu.
+    (DRAM). Đối với SRAM, ta chỉ cần duy trì nguồn điện, dữ liệu sẽ được lưu giữ
+    trong bộ nhớ, tuy nhiên SRAM cần sử dụng sáu bán dẫn (transistor) cho mỗi
+    bit. Mặt khác, DRAM chỉ cần một bán dẫn cho mỗi bit, qua đó cho phép bộ nhớ
+    có mật độ bit cao hơn. Tuy nhiên, DRAM cần các chu trình làm tươi (refresh
+    cycle) thường xuyên để lưu giữ dữ liệu.
     
     \item \textbf{Non-volatile memory (bộ nhớ bất khả biến)}: là loại bộ nhớ có
     thể lưu trữ dữ liệu ngay cả khi thiết bị không được cung cấp điện năng.
@@ -30,18 +30,19 @@ Trong các hệ thống tính toán ngày nay, bộ nhớ được chia thành h
 \end{itemize}
 
 So với non-volatile memory, volatile memory là công nghệ có tốc độ vượt trội
-hơn, tuy nhiên có khả năng mở rộng (scalability) kém hơn. Chính vì vậy, mục
-đích của non-volatile memory là lưu trữ các dữ liệu mà CPU cần truy cập tức
-thời. Trong khi đó, non-volatile memory được dùng để lưu trữ các dữ liệu sẽ
-được sử dụng trong tương lai.
+hơn, tuy nhiên có khả năng mở rộng (scalability) kém hơn. Chính vì vậy, mục đích
+của volatile memory là lưu trữ các dữ liệu mà CPU cần truy cập tức thời. Trong
+khi đó, non-volatile memory được dùng để lưu trữ các dữ liệu sẽ được sử dụng
+trong tương lai.
 
 Khi chuyển dữ liệu từ NAND sang DRAM, hiệu suất chung của hệ thống bị giới hạn
 bởi một độ trễ khá lớn do sự khác biệt giữa hai loại bộ nhớ. Sự khác biệt này
 được giảm thiểu bằng các kỹ thuật sử dụng các kiến trúc khác nhau, qua đó phải
-đánh đổi cho sự phức tạp của hệ thống và kích thước chip. Trong những năm gần
-đây, các nhà nghiên cứu đã bắt đầu khám phá các cách thức cải tiến bộ nhớ cho
-phù hợp với kiến trúc bộ nhớ hiện tại. Storage class memory (SCM, tạm dịch ``bộ
-nhớ cấp lưu trữ'') được đề xuất để giảm sự khác biệt giữa ``memory-memory'' và
+đánh đổi cho sự phức tạp của hệ thống và làm tăng kích thước chip. Trong những
+năm gần đây, các nhà nghiên cứu đã bắt đầu khám phá các cách thức cải tiến bộ
+nhớ cho phù hợp với kiến trúc bộ nhớ hiện tại. Storage class memory (SCM, tạm
+dịch ``bộ nhớ cấp lưu trữ'') được đề xuất để làm giảm thiểu sự khác biệt về hiệu
+năng giữa ``memory-memory'' và
 ``storage-memory''~\cite{gouxOxRAMTechnologyDevelopment2019}.
 
 Để đáp ứng các nhu cầu tính toán hiện nay, các thiết bị bộ nhớ mới được nghiên
@@ -58,12 +59,12 @@ NOR Flash cũng là nền tảng cho các thẻ nhớ Flash và các ổ đĩa b
 state drive, hay SSD) vào những năm 1990.
 
 Toshiba Corp. giới thiệu bộ nhớ NAND Flash vào năm 1988 với hứa hẹn đem lại giá
-thành rẻ hơn NOR Flash và có thông lượng (throughput) nhanh hơn. Thay vì tổ
-chức dưới dạng word hoặc byte như NOR Flash, bộ nhớ NAND Flash được tổ chức
-dưới dạng trang (page) và xóa block (một block bao gồm 64 trang hoặc nhiều
-hơn). Kiến trúc này có lợi cho giá thành nhưng không phù hợp với nhu cầu truy
-cập ngẫu nhiên (random access). Vì vậy, NAND Flash thường được dùng để làm
-thiết bị lưu trữ dữ liệu tương tự như đĩa quang hay ổ cứng.
+thành rẻ hơn NOR Flash và có thông lượng (throughput) lớn hơn. Thay vì tổ chức
+dưới dạng word hoặc byte như NOR Flash, bộ nhớ NAND Flash được tổ chức dưới dạng
+trang (page) và xóa block (một block bao gồm 64 trang hoặc nhiều hơn). Kiến trúc
+này có lợi cho giá thành nhưng không phù hợp với các nhu cầu đòi hỏi truy cập
+ngẫu nhiên (random access). Vì vậy, NAND Flash thường được dùng để làm thiết bị
+lưu trữ dữ liệu tương tự như đĩa quang hay ổ cứng.
 
 \image[1]{img/nand_applications.png}{Các ứng dụng của NAND Flash (Nguồn: Forward
 Insight).}{fig:nand_applications}
@@ -82,11 +83,11 @@ làm tuyệt chủng công nghệ đĩa mềm (floppy disk). SSD có khả năng
 các bộ phận vật lý.
 
 Trong các môi trường tính toán hiệu năng cao, SSD có thể được sử dụng làm I/O
-accelerator. Trong môi trường doanh nghiệp, các hệ thống HDD phải sử dụng các
-kỹ thuật khác nhau để làm tăng băng thông và giảm thời gian truy cập dữ liệu.
-Với hệ thống HDD sử dụng RAID, ta có thể làm tăng băng thông bằng cách thêm
-nhiều HDD hơn, nhưng phải hi sinh chi phí cho điện năng, không gian và chi phí
-làm mát.
+accelerator. Trong môi trường doanh nghiệp sử dụng HDD, các hệ thống HDD phải áp
+dụng các kỹ thuật khác nhau để làm tăng băng thông và giảm độ trễ truy cập dữ
+liệu. Với hệ thống HDD sử dụng RAID, ta có thể cải thiện băng thông bằng cách
+thêm nhiều thiết bị HDD hơn, nhưng phải hi sinh chi phí cho điện năng, không
+gian và chi phí làm mát.
 
 Xét giá thành cho mỗi GB (Gigabyte), HDD hoàn toàn vượt trội so với SSD. Tuy
 nhiên, nếu xét trên toàn hệ thống, ta cần số lượng SSD ít hơn rất nhiều so với
@@ -96,9 +97,9 @@ HDD~\cite{wongMarketApplicationsNAND2010}.
 
 Hình~\ref{fig:ssd_vs_hdd} cho thấy tốc độ đọc và ghi vượt trội của SSD so với
 HDD. Hơn nữa, trong nhiều năm tới, với công nghệ 3-D NAND, NAND Flash vẫn có khả
-năng tiếp tục tăng dung lượng lưu trữ trên cùng một diện tích silicon, làm cho
-giá thành liên tục giảm xuống trong tương lai. Trong khi đó, giá thành của HDD
-vẫn giữ nguyên trong vòng nhiều năm
+năng mở rộng dung lượng lưu trữ trên cùng một diện tích silicon, làm cho giá
+thành tiếp tục giảm xuống trong tương lai. Trong khi đó, giá thành của HDD vẫn
+giữ nguyên trong vòng nhiều năm
 nay~\cite{monziocompagnoniReviewingEvolutionNAND2017}.
 
 \image[1]{img/ssd_vs_hdd.png}{So sánh throughput đọc và ghi giữa HDD và
@@ -111,8 +112,8 @@ trong những năm gần đây. Với vai trò là non-volatile memory với đ�
 có độ tin cậy cao, PCM được coi là giải pháp có tiềm năng trong các hệ thống bộ
 nhớ (memory system). Sự cạnh tranh của PCM với các công nghệ khác dần được tăng
 lên khi PCM giảm được kích thước cell, chuyển từ công nghệ bán dẫn sang kích
-thước nhỏ hơn là đi-ốt (vertical diode). Chúng giúp giảm giá thành thiết bị và
-giảm thiểu chi phí tính toán.
+thước nhỏ hơn là đi-ốt (vertical diode). Các thiết kế này giúp giảm giá thành
+thiết bị và giảm thiểu chi phí, năng lượng tính toán.
 
 Trong PCM, dữ liệu được lưu bằng cách sử dụng sự chênh lệch điện trở giữa pha
 kết tinh có tính dẫn điện (high-conductive crystalline phase) và pha kém kết
@@ -123,10 +124,10 @@ lại lâu (thông thường là 10 năm ở nhiệt độ phòng) và chỉ m�
 ghi~\cite{galloOverviewPhasechangeMemory2020}.
 
 Mục tiêu của thế hệ PCM đầu tiên là cạnh tranh với DRAM: độ trễ đọc và ghi, độ
-bền qua các chu kỳ ghi (cyclic write), retention, v.v. Một vài báo cáo đã cho
-ra kết quả khả quan với độ trễ ghi 120ns, độ trễ đọc 150ns và độ bền có chu kỳ
-lớn hơn 1E9. Tuy nhiên, PCM vẫn chưa đạt được thành công trên thị trường bởi vì
-NAND Flash và DRAM vẫn tiếp tục phát triển nhanh chóng.
+bền qua các chu kỳ ghi (cyclic write), retention, v.v. Một vài nghiên cứu đã cho
+kết quả khả quan với độ trễ ghi 120ns, độ trễ đọc 150ns và độ bền có chu kỳ lớn
+hơn 1E9. Tuy nhiên, PCM vẫn chưa đạt được thành công trên thị trường bởi vì NAND
+Flash và DRAM vẫn được tiếp tục phát triển với tốc độ nhanh hơn.
 
 Tuy nhiên, với nhu cầu của memory-centric computing và storage-class memory
 (SCM), PCM có thể được dùng để lấp khoảng trống giữa NAND Flash và DRAM. Điều
@@ -141,10 +142,10 @@ và các thiết bị lưu trữ dữ liệu (chẳng hạn như NAND Flash). V�
 trúc tổ chức dưới dạng byte (byte-addressable) nên Optane có thể vừa đóng vai
 trò là RAM (Memory mode) vừa có thể được dùng như các thiết bị lưu trữ dữ liệu
 như SSD (App Direct mode). Intel Optane DC Persistent Memory Module (hay Optane
-DC PMM) là bộ nhớ NVDIMM thương mại đầu tiên. So với các thiết bị lưu trữ PCIe,
-Optane DC PMM có hiệu năng cao hơn và hỗ trợ byte-addressable interface. So với
-DRAM, Optane có mật độ và độ bền cao hơn, sử dụng ít điện năng hơn khi idle vì
-không cần phải làm tươi (refresh for data retention) như
+DC PMM) là bộ nhớ NVDIMM X-point thương mại đầu tiên. So với các thiết bị lưu
+trữ PCIe, Optane DC PMM có hiệu năng cao hơn và hỗ trợ byte-addressable
+interface. So với DRAM, Optane có mật độ và độ bền cao hơn, sử dụng ít điện năng
+hơn khi idle vì không cần phải làm tươi (refresh for data retention) như
 DRAM~\cite{izraelevitzBasicPerformanceMeasurements2019}.
 
 Ngoài các mục đích lưu trữ thông thường, PCM còn có thể hoạt động ở các kiến
@@ -186,7 +187,7 @@ DRAM và NAND Flash trong năm 2020.
 \centering
 \begin{tabular}{lllll}
 \hline
-                        & DRAM      & STT-MRAM              & PCM         & NAND Flash  \\ \hline
+                        & \textbf{DRAM}      & \textbf{STT-MRAM}              & \textbf{PCM}         & \textbf{NAND Flash}  \\ \hline
 Trạng thái              & Product   & Prototype             & Product     & Product     \\
 Độ trễ đọc              & 10 ns     & 10 ns                 & 20-50 ns    & 25 us       \\
 Độ trễ ghi              & 10 ns     & 10 ns                 & 80-500 ns   & 200 us      \\
